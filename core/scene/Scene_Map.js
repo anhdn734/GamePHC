@@ -31,7 +31,7 @@ RPGJS_Canvas.Scene.New({
 	data: {},
 	/*materials: {
 		images: {
-			//"window": "../materials/Graphics/Windowskins/window.png"
+			//"window": "../materials/graphics/Windowskins/window.png"
 		}
 	},*/
 	ready: function(stage, params) {
@@ -62,8 +62,8 @@ RPGJS_Canvas.Scene.New({
 		if (data.graphics.tileset) images.push({tileset: RPGJS.Path.get("tilesets", data.graphics.tileset)});
 		if ( data.player.graphic) images.push(RPGJS.Path.get("characters", data.player.graphic, true));
 		// [CUSTOM_PATH]
-		//images.push({window: "../materials/Graphics/Windowskins/window.png"});
-		 images.push({window: "Graphics/Windowskins/window.png"});
+		//images.push({window: "../materials/graphics/Windowskins/window.png"});
+		 images.push({window: "graphics/Windowskins/window.png"});
 		// [END_CUSTOM_PATH]
 		if (global.materials.windowskins) {
 			var win_id = 1;

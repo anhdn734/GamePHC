@@ -165,18 +165,18 @@ Existing type:
 
 Existing type (id: root of path)
 
-- tilesets: "Graphics/Tilesets/",
-- windowskins: "Graphics/Windowskins/"
-- autotiles: "Graphics/Autotiles/"
-- characters: "Graphics/Characters/"
-- animations: "Graphics/Animations/"
-- pictures: "Graphics/Pictures/"
-- battlers: "Graphics/Battlers/"
-- icons: "Graphics/Icons/"
-- titles: "Graphics/Titles/"
-- faces: "Graphics/Faces/"
-- fonts: "Graphics/fonts/"
-- gameovers: "Graphics/Gameovers/"
+- tilesets: "graphics/Tilesets/",
+- windowskins: "graphics/Windowskins/"
+- autotiles: "graphics/Autotiles/"
+- characters: "graphics/Characters/"
+- animations: "graphics/Animations/"
+- pictures: "graphics/Pictures/"
+- battlers: "graphics/Battlers/"
+- icons: "graphics/Icons/"
+- titles: "graphics/Titles/"
+- faces: "graphics/Faces/"
+- fonts: "graphics/fonts/"
+- gameovers: "graphics/Gameovers/"
 - bgms: "Audio/BGM/"
 - bgss: "Audio/BGS/"
 - mes: "Audio/ME/"
@@ -601,18 +601,18 @@ RPGJS.Plugin.call("Game", "foo", ["bar"]); // Called `foo()` method in the `Game
 */			
 	Path: {
 		
-		tilesets: "Graphics/Tilesets/",
-		windowskins: "Graphics/Windowskins/",
-		autotiles: "Graphics/Autotiles/",
-		characters: "Graphics/Characters/",
-		animations: "Graphics/Animations/",
-		pictures: "Graphics/Pictures/",
-		battlers: "Graphics/Battlers/",
-		icons: "Graphics/Icons/",
-		tiles: "Graphics/Tiles/",
-		faces: "Graphics/Faces/",
-		fonts: "Graphics/fonts/",
-		gameovers: "Graphics/Gameovers/",
+		tilesets: "graphics/Tilesets/",
+		windowskins: "graphics/Windowskins/",
+		autotiles: "graphics/Autotiles/",
+		characters: "graphics/Characters/",
+		animations: "graphics/Animations/",
+		pictures: "graphics/Pictures/",
+		battlers: "graphics/Battlers/",
+		icons: "graphics/Icons/",
+		tiles: "graphics/Tiles/",
+		faces: "graphics/Faces/",
+		fonts: "graphics/fonts/",
+		gameovers: "graphics/Gameovers/",
 		bgms: "Audio/BGM/",
 		bgss: "Audio/BGS/",
 		mes: "Audio/ME/",
@@ -627,8 +627,8 @@ RPGJS.Plugin.call("Game", "foo", ["bar"]); // Called `foo()` method in the `Game
 @return {String}
 @example
 
-	RPGJS.Path.getFile("tilesets", "img.png"); // => Graphics/Tilesets/img.png
-	RPGJS.Path.getFile("tilesets", "img.png", "1"); // => {"tilesets_1": "Graphics/Tilesets/img.png"}
+	RPGJS.Path.getFile("tilesets", "img.png"); // => graphics/Tilesets/img.png
+	RPGJS.Path.getFile("tilesets", "img.png", "1"); // => {"tilesets_1": "graphics/Tilesets/img.png"}
  
 */	
 		getFile: function (type, filename, object) {
@@ -658,8 +658,8 @@ RPGJS.Plugin.call("Game", "foo", ["bar"]); // Called `foo()` method in the `Game
 		}
 	};
 
-	RPGJS.Path.get("tilesets", "1"); 					// => Graphics/Tilesets/img.png
-	RPGJS.Path.getFile("tilesets", "1", true); 			// => {"tilesets_1": "Graphics/Tilesets/img.png"}
+	RPGJS.Path.get("tilesets", "1"); 					// => graphics/Tilesets/img.png
+	RPGJS.Path.getFile("tilesets", "1", true); 			// => {"tilesets_1": "graphics/Tilesets/img.png"}
 	RPGJS.Path.getFile("tilesets", "1", false, true); 	// => img.png
  
 */	
@@ -730,7 +730,7 @@ RPGJS.Plugin.call("Game", "foo", ["bar"]); // Called `foo()` method in the `Game
 @example
 
 	RPG.Path.load("animations", "anim.png", "12", function() {
-		RPGJS.Path.get("animations", "12"); // => Graphics/Animations/anim.png
+		RPGJS.Path.get("animations", "12"); // => graphics/Animations/anim.png
 	});
 
 */		

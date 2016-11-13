@@ -4,10 +4,10 @@ RPGJS_Canvas.Scene.New({
 	materials: {
 		images: {
 			// [CUSTOM_PATH]
-			//background: "../materials/Graphics/Pictures/Layer00.png",
-			// box: "../materials/Graphics/Pictures/Sprite_Status.png"
-			 background: "Graphics/Pictures/Layer00.png",
-			 box: "Graphics/Pictures/Sprite_Status.png"
+			//background: "../materials/graphics/Pictures/Layer00.png",
+			// box: "../materials/graphics/Pictures/Sprite_Status.png"
+			 background: "graphics/Pictures/Layer00.png",
+			 box: "graphics/Pictures/Sprite_Status.png"
 			// [END_CUSTOM_PATH]
 		}
 	},

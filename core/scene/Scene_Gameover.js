@@ -4,8 +4,8 @@ RPGJS_Canvas.Scene.New({
 	materials: {
 		images: {
 		// [CUSTOM_PATH]
-		//	background: "../materials/Graphics/Gameovers/gameover.jpg"
-		  background: "Graphics/Gameovers/gameover.jpg"
+		//	background: "../materials/graphics/Gameovers/gameover.jpg"
+		  background: "graphics/Gameovers/gameover.jpg"
 		// [END_CUSTOM_PATH]
 			
 		}

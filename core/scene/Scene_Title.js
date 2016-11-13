@@ -3,12 +3,12 @@ RPGJS_Canvas.Scene.New({
 	materials: {
 		images: {
 			// [CUSTOM_PATH]
-			background: "../materials/Graphics/Titles/picture11.jpg",
-			cursor_on: "../materials/Graphics/Pictures/Mn_Sel.png",
-			cursor_off: "../materials/Graphics/Pictures/Mn_Sel_Off.png"
-			// background: "Graphics/Titles/picture11.jpg",
-			// cursor_on: "Graphics/Pictures/Mn_Sel.png",
-			// cursor_off: "Graphics/Pictures/Mn_Sel_Off.png"
+			background: "../materials/graphics/Titles/picture11.jpg",
+			cursor_on: "../materials/graphics/Pictures/Mn_Sel.png",
+			cursor_off: "../materials/graphics/Pictures/Mn_Sel_Off.png"
+			// background: "graphics/Titles/picture11.jpg",
+			// cursor_on: "graphics/Pictures/Mn_Sel.png",
+			// cursor_off: "graphics/Pictures/Mn_Sel_Off.png"
 			// [END_CUSTOM_PATH]
 		}
 	},
