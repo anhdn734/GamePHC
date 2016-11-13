@@ -1,0 +1,180 @@
+[
+    {
+        "id":"2",
+        "x":"10",
+        "y":"14",
+        "name":"MAP1-EV-2",
+        "desc": "Khởi đầu - gặp Nguyễn Trãi"
+    },
+    [
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"fixed",
+            "speed":"2",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Chúc mừng tướng quân! Tướng quân là người được lựa chọn để giải cứu đất nước khỏi lâm nguy. Để có thể thực hiện sứ mệnh của mình, dám xin tướng quân hãy nghe theo sự hướng dẫn của thần.'}",
+                "SELF_SWITCH_ON: {'id': 'BINHNGO'}"
+            ],
+            "graphic":"2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Muốn giải cứu đất nước, tướng quân cần phải hiểu rõ \\\"Bình Ngô đại cáo\\\". \\\"Bình Ngô đại cáo\\\" là một áng thiên cổ hùng văn, được xem là bản tuyên ngôn độc lập thứ hai của dân tộc.'}",
+                "SELF_SWITCH_ON: {'id': 'CAU1'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "BINHNGO"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': '\\\"Bình Ngô đại cáo\\\" được viết theo thể nào?'}",
+                "CHOICES: ['Cáo', 'Hịch', 'Chiếu', 'Thể loại khác']",
+                "CHOICE_0",
+                    "SHOW_TEXT: {'text': 'Chúc mừng tướng quân, Ngài đã trả lời đúng'}",
+                    "SWITCHES_ON: {'id': 'MAP_1_NGUYENTRAI'}",
+                    "SELF_SWITCH_ON: {'id': 'TRALOIDUNG'}",
+                "CHOICE_1",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'CAU2'}",
+                "CHOICE_2",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'CAU2'}",
+                "CHOICE_3",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'CAU2'}",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "CAU1"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'CÁO là loại văn bản được dùng với mục đích nào dưới đây?\\n1. Dùng để tấu trình những ý kiến của các bậc đại quan trước khi được nhà vua cho phép công bố rộng rãi ra công chúng\\n2. Dùng để kêu gọi nhân dân tập trung vào công cuộc tái thiết đất nước\\n3. Dùng để nhà vua ban bố về những công việc trọng đại của đất nước\\n4. Dùng để ra bất cứ một sắc lệnh nào của nhà vua ngày xưa'}",
+                "CHOICES: ['Ý 1', 'Ý 2', 'Ý 3', 'Ý 4']",
+                "CHOICE_0",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'CAU3'}",
+                "CHOICE_1",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'CAU3'}",
+                "CHOICE_2",
+                    "SHOW_TEXT: {'text': 'Chúc mừng tướng quân, Ngài đã trả lời đúng'}",
+                    "SWITCHES_ON: {'id': 'MAP_1_NGUYENTRAI'}",
+                    "SELF_SWITCH_ON: {'id': 'TRALOIDUNG'}",
+                "CHOICE_3",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'CAU3'}",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "CAU2"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tư tưởng chủ đạo xuyên suốt các áng văn chính luận của Nguyễn Trãi là?'}",
+                "CHOICES: ['tư tưởng nhân đạo, nhân văn', 'tư tưởng nhân nghĩa, yêu nước thương dân', 'tư tưởng trung quân ái quốc', 'tư tưởng lấy dân làm gốc']",
+                "CHOICE_0",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_1",
+                    "SHOW_TEXT: {'text': 'Chúc mừng tướng quân, Ngài đã trả lời đúng'}",
+                    "SWITCHES_ON: {'id': 'MAP_1_NGUYENTRAI'}",
+                    "SELF_SWITCH_ON: {'id': 'TRALOIDUNG'}",
+                "CHOICE_2",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_3",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "CAU3"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân cần tìm hiểu thêm. Hãy quay trở lại khi đã sẵn sàng.'}",
+                "SELF_SWITCH_ON: {'id': 'RETRY'}",
+                "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "FAIL_NOTIFY"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân đã sẵn sàng trả lời các câu hỏi của thần?'}",
+                "CHOICES: ['bắt đầu', 'lát nữa']",
+                "CHOICE_0",
+                    "SELF_SWITCH_ON: {'id': 'BINHNGO'}",
+                    "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}",
+                    "SELF_SWITCH_OFF: {'id': 'CAU1'}",
+                    "SELF_SWITCH_OFF: {'id': 'CAU2'}",
+                    "SELF_SWITCH_OFF: {'id': 'CAU3'}",
+                    "SELF_SWITCH_OFF: {'id': 'RETRY'}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "RETRY"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"10",
+            "speed": "0.3",
+            "type":"random",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Núi Lam Sơn là vùng đất địa thế hiếm có, tướng quân hãy tìm nơi đó làm nơi xây dựng căn cứ.'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "TRALOIDUNG"
+            },
+            "graphic":"2"
+        }
+    ]
+]

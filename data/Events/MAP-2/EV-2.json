@@ -1,0 +1,40 @@
+[
+    {
+        "id":"2",
+        "x":"8",
+        "y":"10",
+        "name": "MAP2-EV-2",
+        "desc": "Vào phòng học"
+    },
+    [
+        {
+            "trigger":"action_button",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân muốn vào phòng học?'}",
+                "CHOICES: ['Đúng', 'Không']",
+                "CHOICE_0",
+                    "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':13,'y': 2, 'id':5}}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions": {
+                "switch_1" : "MAP_2_CONIEMTIN"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"action_button",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Ngươi là ai? Chỉ có chủ nhân nơi này mới được phép vào trong.'}"
+            ],
+            "conditions": {
+                "switch_off_1" : "MAP_2_CONIEMTIN"
+            },
+            "graphic":"2"
+        }
+    ]
+]

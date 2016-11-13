@@ -1,0 +1,22 @@
+[
+    {
+        "id":"3",
+        "x":"13",
+        "y":"1",
+        "name": "EV-3",
+        "desc": "Quay về căn cứ"
+    },
+    [
+        {
+            "trigger":"contact",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':7,'y': 10, 'id':2}}"
+            ],
+            "graphic":"0"
+        }
+    ]
+]

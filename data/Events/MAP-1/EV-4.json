@@ -1,0 +1,129 @@
+[
+    {
+        "id":"4",
+        "x":"36",
+        "y":"3",
+        "name":"MAP1-EV-4",
+        "desc": "Gặp thổ địa"
+    },
+    [
+        {
+            "trigger":"on_vision",
+            "frequence":"5",
+            "type":"fixed",
+            "speed":"2",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Đứng lại, nơi đây là vùng đất của thần thánh, nhà ngươi không được xâm phạm. Nếu muốn vào trong ngọn núi này thì ngươi phải trả lời được câu hỏi của ta.'}",
+                "SELF_SWITCH_ON: {'id': 'CAU1'}"
+            ],
+            "conditions": {
+                "switch_1": "MAP_1_NGUYENTRAI"
+            },
+            "graphic":"3",
+            "graphic-params": {
+                "direction": "left"
+            }
+        },
+        {
+            "trigger":"on_vision",
+            "frequence":"5",
+            "type":"fixed",
+            "speed":"2",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Đứng lại, nơi đây là vùng đất của thần thánh, nhà ngươi không được xâm phạm.'}",
+                "MOVE_ROUTE: {'target': 'player','move': ['turn_180d', 'go_ahead', 'wait_end']}",
+                "WAIT: {'frame': 40}"
+            ],
+            "conditions": {
+                "switch_off_1": "MAP_1_NGUYENTRAI"
+            },
+            "graphic":"3",
+            "graphic-params": {
+                "direction": "left"
+            }
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tư tưởng nhân nghĩa trong \\\"Bình Ngô đại cáo\\\" là gì?\\n1. Yêu thương con người\\n2. Tiêu trừ bọn tham tàn, bạo ngược để bảo vệ cuộc sống yên ổn cho người dân\\n3. Chống kẻ thù xâm lược\\n4. Cả 3 ý trên'}",
+                "CHOICES: ['Ý 1', 'Ý 2', 'Ý 3', 'Ý 4']",
+                "CHOICE_0",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_1",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_2",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_3",
+                    "SHOW_TEXT: {'text': 'Tốt quá. Đại Việt đã có người cứu nguy rồi. Ha ha ha. Từ nay, nơi này sẽ thuộc về tướng quân'}",
+                    "SWITCHES_ON: {'id': 'MAP_1_THODIA'}",
+                    "SELF_SWITCH_ON: {'id': 'TRALOIDUNG'}",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "CAU1"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Nhà ngươi cần phải tìm hiểu thêm. Hãy quay trở lại khi đã sẵn sàng.'}",
+                "SELF_SWITCH_ON: {'id': 'RETRY'}",
+                "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "FAIL_NOTIFY"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Ngươi đã sẵn sàng chưa?'}",
+                "CHOICES: ['bắt đầu', 'lát nữa']",
+                "CHOICE_0",
+                    "SELF_SWITCH_ON: {'id': 'CAU1'}",
+                    "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}",
+                    "SELF_SWITCH_OFF: {'id': 'RETRY'}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "RETRY"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "speed": "0.5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Hãy đi vào trong núi.'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "TRALOIDUNG"
+            },
+            "graphic":"3"
+        }
+    ]
+]

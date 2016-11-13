@@ -1,0 +1,22 @@
+[
+    {
+        "id":"2",
+        "x":"7",
+        "y":"10",
+        "name": "EV-2",
+        "desc": "Người hướng dẫn"
+    },
+    [
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"random",
+            "speed":"0.6",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Các quyển sách được xếp trên giá\\n  Cuốn 1: Luận đề chính nghĩa\\n  Cuốn 2: Bản cáo trạng đanh thép tội ác của giặc\\n  Cuốn 3: Quá trình chinh phạt gian khổ và tất thắng\\n  Cuốn 4: Thắng trận, ý nghĩa và bài học lịch sử'}"
+            ],
+            "graphic":"4"
+        }
+    ]
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "id":"3",
+        "x":"8",
+        "y":"12",
+        "name": "MAP3-EV-3",
+        "desc": "Chàng trai trẻ"
+    },
+    [
+        {
+            "trigger":"contact",
+            "frequence":"2",
+            "type":"random",
+            "speed":"0.3",
+            "commands":
+            [
+                
+            ],
+            "conditions": {},
+            "graphic":"5"
+        }
+    ]
+]

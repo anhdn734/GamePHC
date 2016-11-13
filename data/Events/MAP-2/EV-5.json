@@ -1,0 +1,65 @@
+[
+    {
+        "id":"5",
+        "x":"24",
+        "y":"12",
+        "name": "MAP2-EV-5",
+        "desc": "Thợ rèn"
+    },
+    [
+        {
+            "trigger":"action_button",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tôi là thợ rèn nơi đây. Tôi có thể giúp ngài rèn vũ khí nhưng cần phải có nguồn sắt tốt nhất. Ngài hãy đi vào mỏ sắt để tìm.'}",
+                "SELF_SWITCH_ON: {'id': 'DA_GIOI_THIEU'}"
+            ],
+            "conditions": {
+                "switch_1" : "MAP_2_CONIEMTIN",
+                "self_switch_off": "DA_GIOI_THIEU"
+            },
+            "graphic":"6"
+        },
+        {
+            "trigger":"action_button",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Mỏ sắt nằm ở phía Tấy Bắc'}"
+            ],
+            "conditions": {
+                "switch_1" : "MAP_2_CONIEMTIN",
+                "self_switch": "DA_GIOI_THIEU",
+                "switch_off_1": "MAP_4_MOSAT"
+            },
+            "graphic":"6"
+        },
+        {
+            "trigger":"action_button",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Với số sắt này tôi sẽ rèn cho Ngài những vũ khí tốt nhất'}"
+            ],
+            "conditions": {
+                "switch_1" : "MAP_2_CONIEMTIN",
+                "self_switch": "DA_GIOI_THIEU",
+                "switch_2": "MAP_4_MOSAT"
+            },
+            "graphic":"6"
+        },
+        {
+            "trigger":"action_button",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Ngươi là ai?'}"
+            ],
+            "conditions": {
+                "switch_off_1" : "MAP_2_CONIEMTIN"
+            },
+            "graphic":"6"
+        }
+    ]
+]

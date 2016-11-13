@@ -1,0 +1,26 @@
+[
+    {
+        "id":"3",
+        "x":"38",
+        "y":"1",
+        "name": "MAP1-EV-3",
+        "desc": "Transfer to MAP-2"
+    },
+    [
+        {
+            "trigger":"contact",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':1,'y': 10, 'id':2}}"
+            ],
+            "conditions": {
+                "switch_1": "MAP_1_NGUYENTRAI",
+                "switch_2": "MAP_1_THODIA"
+            },
+            "graphic":"0"
+        }
+    ]
+]

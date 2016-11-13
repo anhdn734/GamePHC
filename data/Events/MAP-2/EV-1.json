@@ -1,0 +1,23 @@
+[
+    {
+        "id":"1",
+        "x":"0",
+        "y":"10",
+        "name": "MAP2-EV-1",
+        "desc": "Transfer back to MAP-1"
+    },
+    [
+        {
+            "trigger":"contact",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':37,'y': 1, 'id':1}}"
+            ],
+            "conditions": {},
+            "graphic":"0"
+        }
+    ]
+]

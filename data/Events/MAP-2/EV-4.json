@@ -1,0 +1,22 @@
+[
+    {
+        "id":"4",
+        "x":"3",
+        "y":"21",
+        "name": "MAP2-EV-4",
+        "desc": "Đi vào chợ"
+    },
+    [
+        {
+            "trigger":"contact",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':31,'y': 1, 'id':3}}"
+            ],
+            "conditions": {}
+        }
+    ]
+]

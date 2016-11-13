@@ -1,0 +1,64 @@
+{
+    "characters": {
+        "0": "event0.png",
+        "1": "event1.png",
+        "2": "event2.png",
+        "3": "event3.png",
+        "4": "event4.png",
+        "5": "event5.png",
+        "6": "event6.png"
+    },
+    "tilesets": {
+        "100": "tileset.png",
+        "1": "001-Grassland01.png",
+        "13": "013-PostTown01.png",
+        "35": "035-Ruins01.png",
+        "40": "040-Tower02.png",
+        "51": "051-Ne.png",
+        "52": "052-VineyardOutside.png",
+        "6": "006-Desert01.png",
+        "2": "002-Woods01.png",
+        "25": "025-Castle01.png"
+    },
+    "autotiles": {
+        "100":"autotile1.png",
+        "101":"autotile2.png",
+        "1": "001-G_Water01.png",
+        "2": "002-G_Shadow01.png",
+        "3": "003-G_Ground01.png",
+        "4": "004-G_Ground02.png",
+        "5": "005-G_Road01.png",
+        "6": "006-G_Road02.png",
+        "7": "007-G_Undulation01.png",
+        "8": "008-G_Undulation02.png",
+        "11": "011-G2_Ground02.png",
+        "15": "015-Sa_Water01.png",
+        "16": "016-Sa_Shadow01.png",
+        "17": "017-Sa_Grass01.png",
+        "18": "018-Sa_Ground01.png",
+        "19": "019-Sa_Grass02.png",
+        "20": "020-Sa_Grass03.png",
+        "23": "023-Sa_Undulation01.png",
+        "33": "033-Waterfall01.png",
+        "36": "036-Tree01.png",
+        "37": "037-Tree02.png",
+        "38": "038-Tree03.png",
+        "40": "040-Ground01.png",
+        "41": "041-Grass01.png",
+        "43": "043-Grass02.png",
+        "44": "044-Road01.png",
+        "47": "047-Flower01.png",
+        "50": "050-Roof02.png",
+        "48": "048-Water01.png",
+        "49": "049-St_Shadow01.png",
+        "50": "050-Roof02.png",
+        "52": "052-Carpet02.png",
+        "53": "053-Wall01.png"
+    },
+    "animations": {
+        "1": "anim.png"
+    },
+    "windowskins": {
+        "1": "window.png"
+    }
+}

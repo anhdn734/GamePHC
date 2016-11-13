@@ -1,0 +1,118 @@
+[
+    {
+        "id":"2",
+        "x":"19",
+        "y":"3",
+        "name": "MAP3-EV-2",
+        "desc": "Chủ quán thịt"
+    },
+    [
+        {
+            "trigger": "action_button",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tất cả lương thực trong cửa hàng đã có người đặt mua hết rồi. Nếu Ngài muốn tất cả lương thực đó thì trả lời đúng câu hỏi của tôi'}",
+                "SELF_SWITCH_ON: {'id': 'QUESTION1'}"
+            ],
+            "conditions": {
+                "switch_1": "MAP_2_CONIEMTIN2"
+            },
+            "graphic":"6"
+        },
+        {
+            "trigger": "auto",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text' : 'Chân lí khách quan của sự tồn tại, sự độc lập có cơ sở, có thực tiễn có chủ quyền của dân tộc Đại Việt đã có từ thuở trước. Những từ ngữ nào trong đoạn văn sau đây minh chứng cho điều đó?\\n\\\"Như nước Đại Việt ta từ trước,\\n Vốn xưng nền văn hiến đã lâu.\\n Núi sông bờ cõi đã chia,\\n Phong tục Bắc, Nam cũng khác.\\\"'}",
+                "CHOICES: ['Từ trước, vốn xưng, đã chia, đã lâu', 'Đại Việt, Núi sông, Bắc Nam', 'Bờ cõi, Đại Việt, văn hiến', 'Từ trước, văn hiến, bờ cõi']",
+                "CHOICE_0",
+                    "SHOW_TEXT: {'text': 'Ngài quả thật là người có tấm lòng lo cho dân cho nước. Số lương thực này tôi xin phép tặng ngài, mong ngài có thể mau chóng hoàn thành việc lớn.'}",
+                    "SWITCHES_ON: {'id': 'MAP_3_MUALUONGTHUC'}",
+                    "SELF_SWITCH_ON: {'id': 'TRALOIDUNG'}",
+                "CHOICE_1",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_2",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_3",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "ENDCHOICES"
+            ],
+            "conditions": {
+                "self_switch": "QUESTION1"
+            },
+            "graphic":"6"
+        },
+        {
+            "trigger": "action_button",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text' : 'Ngươi không cần mua lương thực, hãy đi chỗ khác'}"
+            ],
+            "conditions": {
+                "switch_off_1": "MAP_2_CONIEMTIN2"
+            },
+            "graphic":"6"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân cần tìm hiểu thêm'}",
+                "SELF_SWITCH_ON: {'id': 'RETRY'}",
+                "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "FAIL_NOTIFY"
+            },
+            "graphic":"6"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân đã sẵn sàng chưa?'}",
+                "CHOICES: ['bắt đầu', 'lát nữa']",
+                "CHOICE_0",
+                    "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}",
+                    "SELF_SWITCH_OFF: {'id': 'RETRY'}",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION1'}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "RETRY"
+            },
+            "graphic":"6"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "speed": "0.5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Hãy dùng thật tốt số lương thực ấy'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "TRALOIDUNG"
+            },
+            "graphic":"6"
+        }
+    ]
+]
