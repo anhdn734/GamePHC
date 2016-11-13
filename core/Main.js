@@ -84,7 +84,7 @@ Class.create("RPGJS", {
 @params {Object} params Parameters :
 
 - canvas {String} (mandatory) : name of the identifier of the canvas
-- autoload {Boolean) : load data and resources in `Data/Database.json` and `Data/Materials.json` (`true` by default)
+- autoload {Boolean) : load data and resources in `data/Database.json` and `data/Materials.json` (`true` by default)
 - scene_path {String} : The path to the classes scenes. `./` by default
 
         scene_path: "../" // => ../core/scene
@@ -105,7 +105,7 @@ Class.create("RPGJS", {
 	
 	loadMaterials: function(callback) {
 				
-		CE.getJSON("Data/Materials.json", function($materials) {
+		CE.getJSON("data/Materials.json", function($materials) {
 			global.materials = $materials;			
 			if (callback) callback();						
 		});
@@ -114,7 +114,7 @@ Class.create("RPGJS", {
 	
 	loadDatabase: function(callback) {
 		var self = this;
-		CE.getJSON("Data/Database.json", function($data) {
+		CE.getJSON("data/Database.json", function($data) {
 			global.data = self._defaultData($data);
 			if (callback) callback();
 		});

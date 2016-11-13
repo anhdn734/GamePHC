@@ -143,7 +143,7 @@ var _class = {
 			loadMap({map: map_data});
 		}
 		else {
-			(CE.Core || CE).getJSON("Data/Maps/MAP-" + this.map_id + ".json", loadMap);
+			(CE.Core || CE).getJSON("data/Maps/MAP-" + this.map_id + ".json", loadMap);
 		}
 		this.tick();
    },
@@ -632,8 +632,8 @@ var _class = {
 /**
 @doc map/
 @method loadEvent Load event on the map. The event is then sent to the scene to display
-@param {String} name Filename JSON. The file is located in `Data/Events/MAP-[ID]/[NAME].json`. Example : `Data/Events/MAP-1/EV-1.json`. If the event has no ID, a random ID is automatically given
-@param {Boolean} dynamic (optional) Specifies that the event is dynamic. In this case, the path of the event is `Data/Events/[NAME].json`
+@param {String} name Filename JSON. The file is located in `data/Events/MAP-[ID]/[NAME].json`. Example : `data/Events/MAP-1/EV-1.json`. If the event has no ID, a random ID is automatically given
+@param {Boolean} dynamic (optional) Specifies that the event is dynamic. In this case, the path of the event is `data/Events/[NAME].json`
 @param {Function} callback (optional) Callback function when the event is loaded and displayed. Three parameters sent
 
 - id {Integer} Event ID
@@ -649,7 +649,7 @@ var _class = {
 			dynamic = false;
 		}
 
-		var path = "Data/Events/" + (!dynamic ? "MAP-" + this.map_id + "/" : "") + name + ".json";
+		var path = "data/Events/" + (!dynamic ? "MAP-" + this.map_id + "/" : "") + name + ".json";
 
 		function loadEvent(data) {
 			var id = CanvasEngine.uniqid();
@@ -703,7 +703,7 @@ var _class = {
 /**
 @doc map/
 @method addDynamicEvent Load event on the map. The event is then sent to the scene to display
-@param {String} name Filename JSON. In this case, the path of the event is `Data/Events/[NAME].json`
+@param {String} name Filename JSON. In this case, the path of the event is `data/Events/[NAME].json`
 @param {Object} pos Position on the map
 
 - x {Integer} Position X
