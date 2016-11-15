@@ -1,0 +1,22 @@
+[
+    {
+        "id":"1",
+        "x":"0",
+        "y":"19",
+        "name": "MAP13-EV-1",
+        "desc": "Trở về căn cứ"
+    },
+    [
+        {
+            "trigger":"contact",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':26,'y': 1, 'id':2}}"
+            ],
+            "conditions": {}
+        }
+    ]
+]

@@ -1,0 +1,126 @@
+[
+    {
+        "id":"2",
+        "x":"5",
+        "y":"0",
+        "name": "MAP7-EV-2",
+        "desc": "Bông hoa"
+    },
+    [
+        {
+            "trigger": "action_button",
+            "frequence":"2",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Ta là một bông hoa đặc biệt, muốn thu phục ta ngươi phải trả lời được câu hỏi'}",
+                "SELF_SWITCH_ON: {'id': 'QUESTION1'}"
+            ],
+            "conditions": {
+                "self_switch_off": "TAKEN"
+            },
+            "graphic":"201",
+            "graphic-params": {
+                "nbSequenceX": 32,
+                "nbSequenceY": 32
+            }
+        },
+        {
+            "trigger": "auto",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text' : 'Nhận định nào sau đây là đúng về đoạn 2 của \\\"Bình Ngô Đại Cáo\\\"?'}",
+                "CHOICES: ['Đoạn 2 như 1 bản tuyên ngôn nhân quyền', 'Đoạn 2 vừa cụ thể, vừa khái quát lại giàu tính hình tượng', 'Đoạn 2 sử dụng thủ pháp đối lập', 'Tất cả các ý trên']",
+                "CHOICE_0",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_1",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_2",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_3",
+                    "SHOW_TEXT: {'text': 'Tốt lắm, giờ ta đã ở trong tay ngươi.'}",
+                    "SWITCHES_ON: {'id': 'MAP_7_DALAYDUOCBONGHOA'}",
+                "ENDCHOICES"
+            ],
+            "conditions": {
+                "self_switch": "QUESTION1"
+            },
+            "graphic":"201",
+            "graphic-params": {
+                "nbSequenceX": 32,
+                "nbSequenceY": 32
+            }
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Ngươi cần tìm hiểu thêm'}",
+                "SELF_SWITCH_ON: {'id': 'RETRY'}",
+                "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "FAIL_NOTIFY"
+            },
+            "graphic":"201",
+            "graphic-params": {
+                "nbSequenceX": 32,
+                "nbSequenceY": 32
+            }
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Ngươi muốn thử lại không?'}",
+                "CHOICES: ['bắt đầu', 'lát nữa']",
+                "CHOICE_0",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION1'}",
+                    "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}",
+                    "SELF_SWITCH_OFF: {'id': 'RETRY'}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "RETRY"
+            },
+            "graphic":"201",
+            "graphic-params": {
+                "nbSequenceX": 32,
+                "nbSequenceY": 32
+            }
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "speed": "0.5",
+            "type":"fixed",
+            "commands":
+            [
+                "SELF_SWITCH_OFF: {'id': 'QUESTION1'}",
+                "SELF_SWITCH_OFF: {'id': 'RETRY'}",
+                "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}",
+                "SELF_SWITCH_ON: {'id': 'TAKEN'}"
+            ],
+            "conditions":
+            {
+                "switch_1": "MAP_7_DALAYDUOCBONGHOA",
+                "self_switch_off": "TAKEN"
+            },
+            "graphic":"201",
+            "graphic-params": {
+                "nbSequenceX": 32,
+                "nbSequenceY": 32
+            }
+        }
+    ]
+]

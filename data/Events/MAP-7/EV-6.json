@@ -1,0 +1,38 @@
+[
+    {
+        "id":"6",
+        "x":"0",
+        "y":"12",
+        "name": "MAP-7-EV-6",
+        "desc": "Qua phòng tác chiến"
+    },
+    [
+        {
+            "trigger":"contact",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Có vẻ cô gái kia cần ta giúp đỡ'}"
+            ],
+            "conditions": {
+                "switch_off_1": "MAP_7_CONGAIDUMUC"
+            }
+        },
+        {
+            "trigger":"contact",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':38,'y': 12, 'id':8}}"
+            ],
+            "conditions": {
+                "switch_1": "MAP_7_CONGAIDUMUC",
+                "switch_2": "MAP_13_CHUTHANH"
+            }
+        }
+    ]
+]

@@ -141,6 +141,209 @@
                 "switch_off_1": "MAP_4_MOSAT"
             },
             "graphic":"3"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "speed": "0.5",
+            "type":"fixed",
+            "commands":
+            [
+                "SWITCHES_ON: {'id': 'MAP_2_STAGE2'}"
+            ],
+            "conditions":
+            {
+                "switch_1": "MAP_2_CONIEMTIN",
+                "switch_2": "MAP_3_MUALUONGTHUC",
+                "switch_3": "MAP_4_MOSAT"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "speed": "0.5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Nghe người dân truyền tai nhau, có một chàng trai trẻ trong làng nọ, văn võ song toàn, tướng quân hãy đến gặp chàng để mong được trợ sức.'}"
+            ],
+            "conditions":
+            {
+                "switch_1": "MAP_2_STAGE2"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "speed": "0.5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Xin chúc mừng tướng quân đã chuẩn bị đầy đủ cơ sở vật chất cần thiết cho việc khởi nghĩa. Để xem tướng quân có thể bắt đầu chiêu mộ binh lính được không, ngài hãy trả lời câu hỏi của ta'}",
+                "SELF_SWITCH_ON: {'id': 'QUESTION3'}"
+            ],
+            "conditions":
+            {
+                "switch_1": "MAP_2_STAGE2",
+                "switch_2": "MAP_2_DADAUQUAN"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"2",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Luận đề chính nghĩa mà tướng quân cầm trên tay hết sức chặt chẽ dựa trên những lí luận và thực tiễn xác đáng để khẳng định nguyên lí vững bền được thể hiện qua giọng văn như thế nào?'}",
+                "CHOICES: ['Giọng tự sự, tâm tình, chân thành, tha thiết.', 'Giọng trầm tĩnh', 'Giọng triết lí, đầy tự hào về truyền thống dân tộc.', 'Giọng hào hùng, phấn khởi, tự hào.', 'Giọng ngậm ngùi, xót xa, căm giận.']",
+                "CHOICE_0",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION4'}",
+                "CHOICE_1",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION4'}",
+                "CHOICE_2",
+                    "SHOW_TEXT: {'text': 'Chúc mừng tướng quân đã hoàn thành thử thách'}",
+                    "SWITCHES_ON: {'id': 'STAGE_1_FINISH'}",
+                    "SELF_SWITCH_ON: {'id': 'TRALOIDUNG2'}",
+                "CHOICE_3",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION4'}",
+                "CHOICE_4",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION4'}",
+                "ENDCHOICES"
+            ],
+            "conditions": {
+                "self_switch": "QUESTION3"
+            },
+            "graphic":"5"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"2",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Chưa đúng, hãy trả lời câu hỏi thứ hai của thần'}",
+                "SHOW_TEXT: {'text': 'Nhận xét nào sau đây không đúng với nội dung của đoạn 1 trong bài \\\"Bình Ngô đại cáo\\\"?\\n1. Khái niệm chủ quyền dân tộc mang những nội dung rất hiện đại.\\n2. Tố cáo mạnh mẽ những thủ đoạn lừa bịp, dối trá và tội ác tày trời của giặc Minh.\\n3. Một lí tưởng nhân nghĩa rất tiến bộ, rất cụ thể.\\n4. Tinh thần tự hào dân tộc của ta vì có một cơ sở vững chắc.'}",
+                "CHOICES: ['Ý 1', 'Ý 2', 'Ý 3', 'Ý 4']",
+                "CHOICE_0",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY2'}",
+                "CHOICE_1",
+                    "SHOW_TEXT: {'text': 'Chúc mừng tướng quân đã hoàn thành thử thách'}",
+                    "SWITCHES_ON: {'id': 'STAGE_1_FINISH'}",
+                    "SELF_SWITCH_ON: {'id': 'TRALOIDUNG2'}",
+                "CHOICE_2",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY2'}",
+                "CHOICE_3",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY2'}",
+                "CHOICE_4",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY2'}",
+                "ENDCHOICES"
+            ],
+            "conditions": {
+                "self_switch": "QUESTION4"
+            },
+            "graphic":"5"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân cần tìm hiểu thêm'}",
+                "SELF_SWITCH_ON: {'id': 'RETRY2'}",
+                "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY2'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "FAIL_NOTIFY2"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân đã sẵn sàng chưa?'}",
+                "CHOICES: ['bắt đầu', 'lát nữa']",
+                "CHOICE_0",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION3'}",
+                    "SELF_SWITCH_OFF: {'id': 'QUESTION4'}",
+                    "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY2'}",
+                    "SELF_SWITCH_OFF: {'id': 'RETRY2'}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "RETRY2"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "speed": "0.5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Bây giờ mời ngài hãy đến Kim Các Tự để hoàn thiện kho vũ khí. Kim Các Tự nằm ở phía Đông Bắc, ngài cứ theo lối ấy mà đi, ắt sẽ thấy Kim Các Tự.'}",
+                "SELF_SWITCH_ON: {'id': 'MAP_2_TOIKIMCCACTU'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "TRALOIDUNG2"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "speed": "0.5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Kim Các Tự nằm ở phía Đông Bắc, ngài cứ theo lối ấy mà đi, ắt sẽ thấy Kim Các Tự.'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "MAP_2_TOIKIMCCACTU"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "speed": "0.5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Thần sẽ gặp tướng quân ở phòng kế hoạch tác chiến'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "STAGE_2_FINISH"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "speed": "0.5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Phòng học là nơi chứa đựng tất những gì Ngài cần'}"
+            ],
+            "conditions":
+            {
+                "switch_1": "NOT_READY_TO_ANSWER"
+            },
+            "graphic":"3"
         }
     ]
 ]

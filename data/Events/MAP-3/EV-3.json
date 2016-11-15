@@ -8,16 +8,122 @@
     },
     [
         {
-            "trigger":"contact",
+            "trigger":"action_button",
             "frequence":"2",
             "type":"random",
             "speed":"0.3",
             "commands":
             [
-                
+                "SHOW_TEXT: {'text': 'Ngươi dám đi một mình ra đây? Trong thời kì loạn lạc này, hãy cẩn thận cái mạng'}"
             ],
             "conditions": {},
             "graphic":"5"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"2",
+            "type":"random",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Xin chào tướng quân.'}"
+            ],
+            "conditions": {
+                "switch_1": "MAP_2_CONIEMTIN"
+            },
+            "graphic":"5"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"2",
+            "type":"random",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Chào tướng quân\\nTôi chỉ dốc sức với những bậc minh quân mà thôi. Xin hãy chứng tỏ vị đây đáng để tôi cống hiến sức mình'}",
+                "SELF_SWITCH_ON: {'id': 'QUESTION1'}"
+            ],
+            "conditions": {
+                "switch_1": "MAP_4_MOSAT"
+            },
+            "graphic":"5"
+        },
+        {
+            "trigger": "auto",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text' : 'Trong \\\"Nam quốc sơn hà\\\" của Lý Thường Kiệt, độc lập dân tộc được xác định chủ yếu trên hai yếu tố: lãnh thổ và chủ quyền. Đến \\\"Bình Ngô đại cáo\\\", Nguyễn Trãi bổ sung những yếu tố nào?'}",
+                "CHOICES: ['Văn hiến, lịch sử', 'Lịch sử, phong tục tập quán', 'Văn hiến, phong tục tập quán', 'Văn hiến, phong tục tập quán, lịch sử']",
+                "CHOICE_0",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_1",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_2",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_3",
+                    "SHOW_TEXT: {'text': 'Tướng quân, xin hãy nhận của tôi một lạy. Từ bây giờ, tính mạng tôi thuộc về ngài, nguyện sẽ hết mình vì sự nghiệp cứu nước. Đại Việt là niềm tự hào lớn lao của tôi'}",
+                    "SWITCHES_ON: {'id': 'MAP_2_DADAUQUAN'}",
+                    "SELF_SWITCH_ON: {'id': 'TRALOIDUNG'}",
+                "ENDCHOICES"
+            ],
+            "conditions": {
+                "self_switch": "QUESTION1"
+            },
+            "graphic":"6"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân cần tìm hiểu thêm'}",
+                "SELF_SWITCH_ON: {'id': 'RETRY'}",
+                "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "FAIL_NOTIFY"
+            },
+            "graphic":"6"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"random",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân đã sẵn sàng chưa?'}",
+                "CHOICES: ['bắt đầu', 'lát nữa']",
+                "CHOICE_0",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION1'}",
+                    "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}",
+                    "SELF_SWITCH_OFF: {'id': 'RETRY'}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "RETRY"
+            },
+            "graphic":"6"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"random",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Hãy đưa mệnh lệnh của Ngài'}"
+            ],
+            "conditions":
+            {
+                "switch_1": "MAP_2_DADAUQUAN"
+            },
+            "graphic":"6"
         }
     ]
 ]

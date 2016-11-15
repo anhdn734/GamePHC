@@ -1,0 +1,68 @@
+[
+    {
+        "id":"4",
+        "x":"6",
+        "y":"14",
+        "name": "MAP7-EV-4",
+        "desc": "Con gái du mục"
+    },
+    [
+        {
+            "trigger": "action_button",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Chàng hãy đến nơi có nhiều hoa nhất sa mạc này và hái 1 bông hoa đặc biệt để tặng ta, ta sẽ cho chàng qua.'}",
+                "SWITCHES_ON: {'id': 'MAP_7_DAGAPCONGAIDUMUC'}"
+            ],
+            "conditions": {},
+            "graphic":"6"
+        },
+        {
+            "trigger": "action_button",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Bông hoa thật đẹp, Chàng hãy đi về phía trước để ra khỏi nơi này'}",
+                "SWITCHES_ON: {'id': 'MAP_7_CONGAIDUMUC'}",
+                "SWITCHES_ON: {'id': 'STAGE_2_FINISH'}"
+            ],
+            "conditions": {
+                "switch_1" : "MAP_7_DALAYDUOCBONGHOA"
+            },
+            "graphic":"6"
+        },
+        {
+            "trigger": "action_button",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Có vẻ như chúng ta chưa có người ai dám đứng lên chống lại giặc Minh'}"
+            ],
+            "conditions": {
+                "switch_off_1" : "MAP_2_CONIEMTIN"
+            },
+            "graphic":"6"
+        },
+        {
+            "trigger": "action_button",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Ngươi sẽ bỏ mạng tại đây nếu không chuẩn bị vũ khí đầy đủ'}"
+            ],
+            "conditions": {
+                "switch_off_1" : "MAP_13_CHUTHANH"
+            },
+            "graphic":"6"
+        }
+    ]
+]

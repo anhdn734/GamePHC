@@ -1,0 +1,52 @@
+[
+    {
+        "id":"4",
+        "x":"2",
+        "y":"14",
+        "name": "MAP-8-EV-4",
+        "desc": "Phó tướng"
+    },
+    [
+        {
+            "trigger":"action_button",
+            "frequence":"1",
+            "type":"fixed",
+            "speed":"1.5",
+            "commands":
+            [
+                "SHOW_TEXT: {'text' : 'Cuộc chiến này chưa thấy dấu hiệu kết thúc'}"
+            ],
+            "conditions": {},
+            "graphic":"5"
+        },
+        {
+            "trigger":"on_vision",
+            "frequence":"0",
+            "type":"approach",
+            "speed":"1.5",
+            "commands":
+            [
+                "SHOW_TEXT: {'text' : 'Tình hình đang nguy cấp, để giải vây thế trận này, chúng ta cần phải tìm được binh thư, tương truyền đó là cuốn binh pháp truyền từ 18 đời, lưu giữ những bí kíp võ công tuyệt đỉnh. Theo tiếng đồn xa, hiện nay binh pháp ấy đang được cất giữ ở quả núi cao nhất phía Bắc, cách đây hơn 200 dặm. Muốn đến được nơi ấy phải băng qua một con sông lớn, hai cánh rừng hiểm trở với rất nhiều thú dữ.'}",
+                "SWITCHES_ON: {'id': 'MAP_6_CHO_BINH_THU'}"
+            ],
+            "conditions": {
+                "switch_1": "MAP_6_DATHONGBAO"
+            },
+            "graphic":"5"
+        },
+        {
+            "trigger":"action_button",
+            "type":"random",
+            "frequence":"5",
+            "speed": "0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text' : 'Tướng quân hãy đi về phía Tây của trại lính, ở đó sẽ có đường dẫn đến ngọn núi'}"
+            ],
+            "conditions": {
+                "switch_1": "MAP_6_CHO_BINH_THU"
+            },
+            "graphic":"5"
+        }
+    ]
+]

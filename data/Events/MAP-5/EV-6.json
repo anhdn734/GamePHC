@@ -27,7 +27,8 @@
                     "SHOW_TEXT: {'text': '- Ngôn ngữ: sử dụng nhiều động từ mạnh liên kết với nhau tạo những chuyển rung dồn dập, các tính từ chỉ mức độ cực điểm: thây chất đầy đường, máu trôi đỏ nước…\\n- Hình ảnh phóng đại.\\n- Nhịp điệu câu văn: khi dài, khi ngắn, linh hoạt, đôi lúc lại dồn dập, sáng khoái, bay bổng, hào hung.'}",
                 "CHOICE_2",
                     "SHOW_TEXT: {'text': '- Tha tội chết cho quân giặc đầu hàng\\n- Cấp ngựa, cấp thuyền, lương ăn cho quân bại trận\\nThể hiện đức hiếu sinh, lòng nhân đạo, tình yêu hòa bình, sách lược để tính kế lâu dài , bền vững cho non sông.\\nTính chất chính nghĩa, nhân đạo sáng ngời của cuộc khởi nghĩa Lam Sơn.'}",
-                "ENDCHOICES"
+                "ENDCHOICES",
+                "SWITCHES_OFF: {'id': 'NOT_READY_TO_ANSWER'}"
             ]
         }
     ]

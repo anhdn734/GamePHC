@@ -1,0 +1,54 @@
+[
+    {
+        "id":"2",
+        "x":"20",
+        "y":"12",
+        "name": "MAP-8-EV-2",
+        "desc": "Lính cấp báo"
+    },
+    [
+        {
+            "trigger":"on_vision",
+            "frequence":"0.1",
+            "type":"approach",
+            "speed":"1.5",
+            "commands":
+            [
+                "SHOW_TEXT: {'text' : 'Cấp báo, cấp báo. Thưa tướng quân, quân giặc đang muốn lật lại tình thế, mang quân cứu viện sang bao vây ta tứ phía. Chúng thần xin đợi lệnh từ tướng quân.'}",
+                "SELF_SWITCH_ON: {'id': 'MAP_6_DATHONGBAO'}"
+            ],
+            "conditions": {
+                "switch_1": "MAP_6_TINTUC"
+            },
+            "graphic":"5"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"1",
+            "type":"fixed",
+            "speed":"1.5",
+            "commands":
+            [
+                "SWITCHES_ON: {'id': 'MAP_6_DATHONGBAO'}"
+            ],
+            "conditions": {
+                "self_switch": "MAP_6_DATHONGBAO"
+            },
+            "graphic":"5"
+        },
+        {
+            "trigger":"action_button",
+            "frequence": "5",
+            "type":"random",
+            "speed": "0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text' : 'Chiến trường thật khốc liệt!'}"
+            ],
+            "conditions": {
+                "switch_1": "MAP_6_DATHONGBAO"
+            },
+            "graphic":"5"
+        }
+    ]
+]

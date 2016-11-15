@@ -1,0 +1,22 @@
+[
+    {
+        "id":"7",
+        "x":"26",
+        "y":"0",
+        "name": "MAP2-EV-7",
+        "desc": "Đến Kin Các Tự"
+    },
+    [
+        {
+            "trigger":"contact",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':0,'y': 18, 'id':13}}"
+            ],
+            "conditions": {}
+        }
+    ]
+]

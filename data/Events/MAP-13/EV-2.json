@@ -1,0 +1,162 @@
+[
+    {
+        "id":"2",
+        "x":"28",
+        "y":"9",
+        "name": "MAP13-EV-2",
+        "desc": "Chủ thành"
+    },
+    [
+        {
+            "trigger":"action_button",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tội ác của giặc Minh: lừa mị dân chúng, gây cảnh binh đao, tàn sát người dân vô tội, tham lam vơ vét của cải, bóc lột nhân dân, nô dịch khổ sai dân chúng'}",
+                "SELF_SWITCH_ON: {'id': 'Q_PREPARE'}"
+            ],
+            "conditions": {},
+            "graphic": "4"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Ngươi là ai? Có muốn đầu quân cho cuộc khởi nghĩa của ta không?'}"
+            ],
+            "conditions": {
+                "switch_off_1": "MAP_2_CONIEMTIN"
+            },
+            "graphic": "4"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân chưa có đủ binh lực và số vũ khí cần thiết, hãy quay về và chuẩn bị'}"
+            ],
+            "conditions": {
+                "switch_off_1": "STAGE_1_FINISH"
+            },
+            "graphic": "4"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân đã chuẩn bị đầy đủ vũ khí. Tuy nhiên, chúng tôi cần kiểm tra xem vũ khí của tướng quân có chất lượng không, xin mời tướng quân trả lời câu hỏi của thần'}",
+                "SELF_SWITCH_ON: {'id': 'QUESTION1'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "Q_PREPARE"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SELF_SWITCH_OFF: {'id': 'Q_PREPARE'}",
+                "SHOW_TEXT: {'text': 'Nội dung chính của đoạn thứ 2 trong \\\"Bình Ngô Đại Cáo\\\" là ?'}",
+                "CHOICES: ['Khẳng định tinh thần nhân nghĩa', 'Vạch trần âm mưu xâm lược', 'Bản cáo trạng tố cáo tội ác giặc Minh', 'Chủ trương cai trị thâm độc']",
+                "CHOICE_0",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_1",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_2",
+                    "SHOW_TEXT: {'text': 'Chúc mừng tướng quân đã tích lũy đủ vũ khí, để đi đến được phòng \\\"kế hoạch tác chiến\\\" tướng quân cần vượt qua một sa mạc ở phía Tây Bắc của thành trì.'}",
+                    "SWITCHES_ON: {'id': 'MAP_13_CHUTHANH'}",
+                    "SELF_SWITCH_ON: {'id': 'TRALOIDUNG'}",
+                "CHOICE_3",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "QUESTION1"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân đã sẵn sàng trả lời các câu hỏi của thần?'}",
+                "CHOICES: ['bắt đầu', 'lát nữa']",
+                "CHOICE_0",
+                    "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}",
+                    "SELF_SWITCH_OFF: {'id': 'RETRY'}",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION1'}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "RETRY"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"10",
+            "speed": "0.3",
+            "type":"random",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân cần về căn cứ để tìm hiểu thêm'}"
+            ],
+            "conditions":
+            {
+                "switch_1": "NOT_READY_TO_ANSWER"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Xin lỗi tướng quân, vũ khí của tướng quân chưa đủ để đáp ứng cho trận chiến, mời tướng quân quay lại phòng học ở căn cứ để tích lũy thêm'}",
+                "SWITCHES_ON: {'id': 'NOT_READY_TO_ANSWER'}",
+                "SELF_SWITCH_ON: {'id': 'RETRY'}",
+                "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "FAIL_NOTIFY"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"10",
+            "speed": "0.3",
+            "type":"random",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân hãy mau chóng tiêu diệt giặc Minh mang về bình yên cho đất nước.'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "TRALOIDUNG"
+            },
+            "graphic":"2"
+        }
+    ]
+]

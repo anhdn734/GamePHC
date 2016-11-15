@@ -1,26 +1,45 @@
 [
     {
         "id":"3",
-        "x":"13",
-        "y":"2",
-        "name": "EV-3",
-        "desc": "Transfer to MAP-2"
+        "x":"21",
+        "y":"4",
+        "name": "MAP-8-EV-3",
+        "desc": "Tới nơi Duy Ác"
     },
     [
         {
-            "trigger":"contact",
-            "frequence":"2",
+            "trigger":"auto",
+            "frequence":"5",
             "type":"fixed",
-            "speed":"0.3",
+            "speed":"3",
             "commands":
             [
-                "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':1,'y': 1, 'id':2}}"
+                "MOVE_ROUTE: {'target': 'this','move': ['bottom', 'left', 'turn_90d_right']}",
+                "SELF_SWITCH_ON: {'id': 'MOVE_FINISH'}"
             ],
             "conditions": {
-                "switch_1": "NGUYENTRAI_DONE",
-                "switch_2": "THODIA_DONE"
+                "switch_1": "MAP_8_FINISH"
             },
-            "graphic":"0"
+            "graphic":"4"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"2",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text' : 'Thần sẽ đưa tướng quân tới nơi Duy Ác. Tướng quân muốn đi chứ?'}",
+                "CHOICES: ['Tới nơi Duy Ác', 'Không']",
+                "CHOICE_0",
+                    "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':0,'y': 8, 'id':6}}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions": {
+                "switch_1": "MAP_8_FINISH",
+                "self_switch": "MOVE_FINISH"
+            },
+            "graphic":"4"
         }
     ]
 ]

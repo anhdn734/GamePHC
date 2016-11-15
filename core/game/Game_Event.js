@@ -184,6 +184,7 @@ Class.create("Game_Event", {
 		if (page_find) {
 			// update options
 			this.options = this.pages[this.currentPage].options;
+			this.type = this.pages[this.currentPage].type;
 		}
 		return lastPage != this.currentPage && lastPage != -1;
 	},

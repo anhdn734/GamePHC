@@ -1,0 +1,159 @@
+[
+    {
+        "id":"1",
+        "x":"5",
+        "y":"14",
+        "name":"MAP6-EV-1",
+        "desc": "Nguyễn Trãi"
+    },
+    [
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"fixed",
+            "speed":"2",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Vận nước nguy nan, “Tuấn kiệt như sao buổi sớm,” “Nhân tài như lá mùa thu”'}",
+                "SELF_SWITCH_ON: {'id': 'QUESTION1'}"
+            ],
+            "graphic":"2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân hãy cho biết để giành được chiến thắng trước tình cảnh tương quan không cân sức, quân ta cần những điều gì?'}",
+                "CHOICES: ['Tình yêu đất nước', 'Ý chí khắc phục hoàn cảnh', 'Tinh thần đoàn kết dân tộc và tư tưởng chính nghĩa', 'Chiến thuật linh hoạt', 'Tất cả các ý trên']",
+                "CHOICE_0",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_1",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_2",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_3",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_4",
+                    "SHOW_TEXT: {'text': 'Chúc mừng tướng quân, Ngài đã trả lời đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION2'}",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "QUESTION1"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Chúc mừng tướng quân đã hiểu được ta cần những điều gì để giành được chiến thắng trước quân thù mạnh như hiện nay. Tuy nhiên, tướng quân hãy cho biết ý nghĩa của việc:\\n“Đem đại nghĩa để thắng hung tàn,”\\n“Lấy chí dân để thay cường bạo”'}",
+                "CHOICES: ['Đề cao tư tưởng nhân đạo của dân tộc ta', 'Khẳng định chính nghĩa ắt thắng phi nghĩa', 'Khẳng định sức mạnh đoàn kết, quyết chiến, quyết thắng của dân tộc ta', 'Hai ý đầu']",
+                "CHOICE_0",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_1",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_2",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_3",
+                    "SHOW_TEXT: {'text': 'Chúc mừng tướng quân, Ngài đã trả lời đúng'}",
+                    "SWITCHES_ON: {'id': 'MAP_6_NGUYENTRAI'}",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "QUESTION2"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Xin lỗi tướng quân, tướng quân đã chưa hiểu được yếu tố cốt lõi khiến ta giành được chiến thắng, cứu lấy vận nước “ngàn cân treo sợi tóc” hiện nay, mời tướng quân suy xét lại để đưa ra kế sách cứu nước phù hợp.'}",
+                "SELF_SWITCH_ON: {'id': 'RETRY'}",
+                "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "FAIL_NOTIFY"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân đã sẵn sàng trả lời các câu hỏi của thần?'}",
+                "CHOICES: ['bắt đầu', 'lát nữa']",
+                "CHOICE_0",
+                    "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION1'}",
+                    "SELF_SWITCH_OFF: {'id': 'RETRY'}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "RETRY"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"10",
+            "speed": "0.3",
+            "type":"random",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Chúc mừng tướng quân đã hiểu được tinh thần chiến đấu của dân tộc ta'}",
+                "SHOW_TEXT: {'text': 'Thưa tướng quân, hiện quân ta đang chiến đấu với khí thế hào hùng tựa như sóng trào bão cuốn, xin Ngài hãy chờ đôi chút'}",
+                "SHOW_TEXT: {'text': 'Xin tướng quân hãy chờ thông tin từ chiến trận'}",
+                "SCRIPT: {'text': 'wait5s();'}",
+                "SELF_SWITCH_ON: {'id': 'WAITINGFOR'}"
+            ],
+            "conditions":
+            {
+                "switch_1": "MAP_6_NGUYENTRAI"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"10",
+            "speed": "0.3",
+            "type":"random",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Xin tướng quân hãy chờ thông tin từ chiến trận'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "WAITINGFOR"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"10",
+            "speed": "0.3",
+            "type":"random",
+            "commands":
+            [],
+            "conditions":
+            {
+                "switch_1": "MAP_6_TINTUC"
+            },
+            "graphic":"2"
+        }
+    ]
+]

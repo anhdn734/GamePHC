@@ -1,10 +1,10 @@
 [
     {
-        "id":"3",
-        "x":"34",
-        "y":"1",
-        "name": "MAP7-EV-3",
-        "desc": "Binh lính"
+        "id":"2",
+        "x":"26",
+        "y":"15",
+        "name": "MAP7-EV-2",
+        "desc": "Mục đồng"
     },
     [
         {
@@ -14,24 +14,11 @@
             "speed":"0.3",
             "commands":
             [
-                "SHOW_TEXT: {'text': 'Sa mạc này rất nóng, ngươi có chịu nổi không?'}",
-                "SELF_SWITCH_ON: {'id': 'QUESTION1'}"
-            ],
-            "conditions": {},
-            "graphic":"6"
-        },
-        {
-            "trigger": "action_button",
-            "frequence":"2",
-            "type":"fixed",
-            "speed":"0.3",
-            "commands":
-            [
-                "SHOW_TEXT: {'text': 'Cuộc chiến chống giặc Minh thật khó khăn. Ngươi đã gặp tên mục đồng rồi, để tiếp tục, ngươi cần trả lời câu hỏi của ta'}",
+                "SHOW_TEXT: {'text': 'Ta là mục đồng của sa mạc này, ta sẽ chỉ cho ngươi lối đi nếu trả lời được câu hỏi của ta.'}",
                 "SELF_SWITCH_ON: {'id': 'QUESTION1'}"
             ],
             "conditions": {
-                "switch_1": "MAP_7_DUMUC"
+                "switch_1": "MAP_13_CHUTHANH"
             },
             "graphic":"6"
         },
@@ -42,13 +29,17 @@
             "speed":"0.3",
             "commands":
             [
-                "SHOW_TEXT: {'text' : 'Âm mưu xâm lược nước ta của giặc Minh đã được chúng ấp ủ từ lâu phải không?'}",
-                "CHOICES: ['Đúng', 'Sai']",
+                "SHOW_TEXT: {'text' : 'Âm mưu xâm lược của nước ta của nhà Hồ là gì ?'}",
+                "CHOICES: ['Bịp bợm, giả nhân, giả nghĩa', 'Luận điệu \\\"Phù Trần, diệt Hồ\\\"', 'Vô cùng nham hiểm', 'Hai ý đầu đúng']",
                 "CHOICE_0",
-                    "SHOW_TEXT: {'text': 'Ha ha nhà ngươi đã bị dân du mục lừa rồi, hãy đi tìm con gái của hắn.'}",
-                    "SWITCHES_ON: {'id': 'MAP_7_BINHLINH'}",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
                 "CHOICE_1",
                     "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_2",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_3",
+                    "SHOW_TEXT: {'text': 'Hãy đi đến nơi cao nhất của sa mạc này, và ngươi sẽ biết mình phải làm gì.'}",
+                    "SWITCHES_ON: {'id': 'MAP_7_DUMUC'}",
                 "ENDCHOICES"
             ],
             "conditions": {
@@ -63,7 +54,7 @@
             "speed":"0.3",
             "commands":
             [
-                "SHOW_TEXT: {'text' : 'Ngươi cũng là một anh hùng giống ta ư? Không đâu!'}"
+                "SHOW_TEXT: {'text' : 'Ta thấy Ngươi thật là một người chính trực'}"
             ],
             "conditions": {
                 "switch_off_1": "STAGE_1_FINISH"
@@ -77,7 +68,7 @@
             "speed":"0.3",
             "commands":
             [
-                "SHOW_TEXT: {'text' : 'Nếu ra chiến trận, ta không nghĩ ngươi sẽ sống sót. Hãy chạy đi?'}"
+                "SHOW_TEXT: {'text' : 'Sa mạc này là mồ chôn của rất nhiều anh hùng?'}"
             ],
             "conditions": {
                 "switch_off_1": "MAP_2_CONIEMTIN"
@@ -90,7 +81,7 @@
             "type":"fixed",
             "commands":
             [
-                "SHOW_TEXT: {'text': 'Tệ quá, ngươi đã trả lời sai rồi'}",
+                "SHOW_TEXT: {'text': 'Ngươi cần tìm hiểu thêm'}",
                 "SELF_SWITCH_ON: {'id': 'RETRY'}",
                 "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}"
             ],
@@ -106,7 +97,7 @@
             "type":"fixed",
             "commands":
             [
-                "SHOW_TEXT: {'text': 'Trả lời lại câu hỏi của ta?'}",
+                "SHOW_TEXT: {'text': 'Ngươi đã sẵn sàng trả lời câu hỏi chưa?'}",
                 "CHOICES: ['bắt đầu', 'lát nữa']",
                 "CHOICE_0",
                     "SELF_SWITCH_ON: {'id': 'QUESTION1'}",
@@ -128,11 +119,11 @@
             "type":"fixed",
             "commands":
             [
-                "SHOW_TEXT: {'text': 'Ha ha nhà ngươi đã bị dân du mục lừa rồi, hãy đi tìm con gái của hắn.'}"
+                "SHOW_TEXT: {'text': 'Hãy đi đến nơi cao nhất của sa mạc này,và ngươi sẽ biết mình phải làm gì.'}"
             ],
             "conditions":
             {
-                "switch_1": "MAP_7_BINHLINH"
+                "switch_1": "MAP_7_DUMUC"
             },
             "graphic":"6"
         },
@@ -143,26 +134,11 @@
             "type":"fixed",
             "commands":
             [
-                "SHOW_TEXT: {'text': 'Ngươi thật có tài, bông hoa đó ta cũng đã cố gắng lắm nhưng vẫn chưa lấy được nó'}"
+                "SHOW_TEXT: {'text': 'Tốt quá, ngươi đã tìm cho con gái ta bông hoa đặc biệt đó. Ta đã từng thử và chưa bao giờ thành công, trừ ngươi.'}"
             ],
             "conditions":
             {
-                "switch_1": "MAP_7_DALAYDUOCBONGHOA"
-            },
-            "graphic":"6"
-        },
-        {
-            "trigger":"action_button",
-            "frequence":"5",
-            "speed": "0.5",
-            "type":"fixed",
-            "commands":
-            [
-                "SHOW_TEXT: {'text': 'Bông hoa đó nằm ở phía Tây'}"
-            ],
-            "conditions":
-            {
-                "switch_1": "MAP_7_DAGAPCONGAIDUMUC"
+                "self_switch": "MAP_7_CONGAIDUMUC"
             },
             "graphic":"6"
         }

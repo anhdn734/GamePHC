@@ -1,0 +1,24 @@
+[
+    {
+        "id":"4",
+        "x":"0",
+        "y":"9",
+        "name": "MAP8-EV-4",
+        "desc": "Đường lấy binh thư 1"
+    },
+    [
+        {
+            "trigger":"contact",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':38,'y': 17, 'id':9}}"
+            ],
+            "conditions": {
+                "switch_1": "MAP_6_CHO_BINH_THU"
+            }
+        }
+    ]
+]

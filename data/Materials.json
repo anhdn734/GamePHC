@@ -6,7 +6,8 @@
         "3": "event3.png",
         "4": "event4.png",
         "5": "event5.png",
-        "6": "event6.png"
+        "6": "event6.png",
+        "201": "201-Flower.png"
     },
     "tilesets": {
         "100": "tileset.png",
@@ -18,7 +19,8 @@
         "52": "052-VineyardOutside.png",
         "6": "006-Desert01.png",
         "2": "002-Woods01.png",
-        "25": "025-Castle01.png"
+        "25": "025-Castle01.png",
+        "23": "023-FarmVillage01.png"
     },
     "autotiles": {
         "100":"autotile1.png",

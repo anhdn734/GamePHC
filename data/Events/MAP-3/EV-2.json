@@ -18,7 +18,7 @@
                 "SELF_SWITCH_ON: {'id': 'QUESTION1'}"
             ],
             "conditions": {
-                "switch_1": "MAP_2_CONIEMTIN2"
+                "switch_1": "MAP_2_CONIEMTIN"
             },
             "graphic":"6"
         },
@@ -58,7 +58,7 @@
                 "SHOW_TEXT: {'text' : 'Ngươi không cần mua lương thực, hãy đi chỗ khác'}"
             ],
             "conditions": {
-                "switch_off_1": "MAP_2_CONIEMTIN2"
+                "switch_off_1": "MAP_2_CONIEMTIN"
             },
             "graphic":"6"
         },

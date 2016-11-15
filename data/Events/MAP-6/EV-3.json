@@ -1,26 +1,28 @@
 [
     {
         "id":"3",
-        "x":"13",
-        "y":"2",
-        "name": "EV-3",
-        "desc": "Transfer to MAP-2"
+        "x":"0",
+        "y":"7",
+        "name": "MAP-6-EV-3",
+        "desc": "Đi về trại lính"
     },
     [
         {
-            "trigger":"contact",
+            "trigger":"action_button",
             "frequence":"2",
             "type":"fixed",
             "speed":"0.3",
             "commands":
             [
-                "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':1,'y': 1, 'id':2}}"
+                "SHOW_TEXT: {'text' : 'Thần sẽ hộ tống tướng quân về trại lính. Tướng quân muốn đi chứ?'}",
+                "CHOICES: ['Quay về', 'Không']",
+                "CHOICE_0",
+                    "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':20,'y': 5, 'id':8}}",
+                "CHOICE_1",
+                "ENDCHOICES"
             ],
-            "conditions": {
-                "switch_1": "NGUYENTRAI_DONE",
-                "switch_2": "THODIA_DONE"
-            },
-            "graphic":"0"
+            "conditions": {},
+            "graphic":"5"
         }
     ]
 ]
