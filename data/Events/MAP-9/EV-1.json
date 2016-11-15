@@ -1,0 +1,170 @@
+[
+    {
+        "id":"51",
+        "x":"9",
+        "y":"7",
+        "name": "MAP-9-EV-1",
+        "desc": "Thần sông"
+    },
+    [
+        {
+            "trigger":"on_vision",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Ta là Thần Sông\\nSông sâu hiểm trở, người thường muốn vượt qua không phải chuyện dễ'}",
+                "SELF_SWITCH_ON: {'id': 'Q_PREPARE'}"
+            ],
+            "conditions": {},
+            "graphic": "4"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Nếu ngươi có thể vượt qua thử thách của ta, ta sẽ đưa tướng quân qua sông'}",
+                "SHOW_TEXT: {'text': 'Được, xin thần sông giữ lời'}",
+                "SELF_SWITCH_ON: {'id': 'QUESTION1'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "Q_PREPARE"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SELF_SWITCH_OFF: {'id': 'Q_PREPARE'}",
+                "SHOW_TEXT: {'text': 'Hãy cho ta biết, trong đợt 1, quân Đại Việt đã giành những chiến thắng liên tiếp nào?'}",
+                "CHOICES: ['Bồ Đằng, Trà Lân, Tây Kinh, Đông Đô', 'Bồ Đằng, Tây Kinh, Đông Đô, Trà Lân', 'Trà Lân, Tây Kinh, Đông Đô, Bồ Đằng', 'Tây Kinh, Bồ Đằng, Trà Lân, Đông Đô']",
+                "CHOICE_0",
+                    "SHOW_TEXT: {'text': 'Chúc mừng, ngươi đã trả lời đúng.'}",
+                    "SWITCHES_ON: {'id': 'MAP_9_THANSONG'}",
+                "CHOICE_1",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION2'}",
+                "CHOICE_2",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION2'}",
+                "CHOICE_3",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION2'}",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "QUESTION1"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Chưa đúng, hãy trả lời câu hỏi tiếp theo'}",
+                "SHOW_TEXT: {'text': 'Nhận xét nào đúng về hai địa danh \\\"Bồ Đằng\\\", \\\"Trà Lân\\\" trong câu văn: \\\"Trận Bồ Đằng sấm vang chớp giật - Miền Trà Lân trúc chẻ tro bay\\\"'}",
+                "SHOW_TEXT: {'text': 'Ý thứ nhất:\\nĐó là tên hai địa danh ở nước ta, nơi đã diễn ra những trận đánh lớn đầu tiên mở đầu giai đoạn phản công của nghĩa quân Lam Sơn'}",
+                "SHOW_TEXT: {'text': 'Ý thứ hai:\\nĐó là tên hai địa danh ở nước ta, nơi ghi dấu những chiến thắng vẻ vang trong công cuộc giữ nước, chống ngoại xâm của cha ông.'}",
+                "SHOW_TEXT: {'text': 'Ý thứ ba:\\nĐó là tên hai địa danh ở nước ta, nơi đã diễn ra những chiến thắng quyết định buộc quân Minh phải đầu hàng, rút quân về nước.'}",
+                "SHOW_TEXT: {'text': 'Ý thứ tư\\nĐó là tên hai địa danh ở Trung Quốc nơi đã diễn ra những trận chiến lớn, nổi tiếng trong lịch sử.'}",
+                "SHOW_TEXT: {'text': 'Ý nào trong 4 ý trên là chính xác'}",
+                "CHOICES: ['Ý 1', 'Ý 2', 'Ý 3', 'Ý 4']",
+                "CHOICE_0",
+                    "SHOW_TEXT: {'text': 'Chúc mừng, ngươi đã trả lời đúng.'}",
+                    "SWITCHES_ON: {'id': 'MAP_9_THANSONG'}",
+                "CHOICE_1",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_2",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_3",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "QUESTION2"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân đã sẵn sàng chưa?'}",
+                "CHOICES: ['trả lời', 'lát nữa']",
+                "CHOICE_0",
+                    "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}",
+                    "SELF_SWITCH_OFF: {'id': 'RETRY'}",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION1'}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "RETRY"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"10",
+            "speed": "0.3",
+            "type":"random",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân cần về căn cứ để tìm hiểu thêm, hãy hỏi Nguyễn Trãi hoặc phó tướng của mình'}"
+            ],
+            "conditions":
+            {
+                "switch_1": "NOT_READY_TO_ANSWER"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Xin lỗi tướng quân, tướng quân chưa nắm được tình hình chiến sự của quân mình, vậy nên mời tướng quân xem xét lại'}",
+                "SWITCHES_ON: {'id': 'NOT_READY_TO_ANSWER'}",
+                "SELF_SWITCH_ON: {'id': 'RETRY'}",
+                "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "FAIL_NOTIFY"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"10",
+            "speed": "0.3",
+            "type":"random",
+            "commands":
+            [
+                "SHOW_TEXT: {'text' : 'Tướng quân có muốn qua sông không?'}",
+                "CHOICES: ['Có', 'Không']",
+                "CHOICE_0",
+                    "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':35,'y': 15, 'id':10}}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "switch_1": "MAP_9_THANSONG"
+            },
+            "graphic":"2"
+        }
+    ]
+]

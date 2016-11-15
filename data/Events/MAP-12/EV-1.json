@@ -1,0 +1,42 @@
+[
+    {
+        "id":"9",
+        "x":"10",
+        "y":"10",
+        "name":"MAP12-EV-1",
+        "desc": "Gặp lại Nguyễn Trãi"
+    },
+    [
+        {
+            "trigger":"on_vision",
+            "frequence":"5",
+            "type":"fixed",
+            "speed":"2",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': '\\\"Bình Ngô Đại Cáo\\\" có nội dung hết sức đa dạng, kết cấu chặt chẽ, giọng điệu đa dạng, lập luận lí lẽ hùng hồn, đanh thép, dẫn chứng thuyết phục => thể hiện quá trình đấu tranh oanh liệt làm sống lại cả một thời đại oai hùng.'}",
+                "SHOW_TEXT: {'text': 'Ta và những người dân Đại Việt hôm nay có quyền thừa hưởng được sự tự hào nhưng đồng thời cũng thấy được vai trò trách nhiệm của mình là làm sao để kế thừa, phát huy cái truyền thống đó ngày càng tốt đẹp hơn.'}",
+                "SHOW_TEXT: {'text': 'Nhân dân Đại Việt nhận ra rằng “Bình Ngô đại cáo” ra đời từ thế kỉ thứ  XV (cách chúng ta đến 6 thế kỉ) nhưng không khí ngày hôm qua vẫn sống mãi với chúng ta.'}",
+                "SHOW_TEXT: {'text': '“Bình ngô đại cáo” xứng đáng là áng thiên cổ hùng văn mà đó cũng chính là bản tuyên ngôn độc lập lần thứ 2 của dân tộc ta.'}",
+                "SHOW_TEXT: {'text': 'YOU WIN'}",
+                "SWITCHES_ON: {'id': 'GAME_OVER'}"
+            ],
+            "conditions": {},
+            "graphic": "2"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"fixed",
+            "speed":"2",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'GAME OVER - YOU WIN'}"
+            ],
+            "conditions": {
+                "switch_1": "GAME_OVER"
+            },
+            "graphic": "2"
+        }
+    ]
+]

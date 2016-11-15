@@ -1,0 +1,229 @@
+[
+    {
+        "id":"20",
+        "x":"9",
+        "y":"12",
+        "name": "EV-3",
+        "desc": "Nguyễn Trãi chờ đón chúa công"
+    },
+    [
+        {
+            "trigger":"on_vision",
+            "frequence":"2",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Nghe báo quân ta đã toàn thắng, từ nay dân tộc Đại Việt đã được an yên, xin cảm ơn tướng quân vì đã vất vả điều binh khiển tướng và suy nghĩ kế sách để thu được chiến thắng như hiện nay'}",
+                "SELF_SWITCH_ON: {'id': 'QUESTION1'}"
+            ],
+            "conditions": {
+                "switch_1": "STAGE_3_FINISH"
+            },
+            "graphic":"5"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"2",
+            "type":"fixed",
+            "commands":
+            [
+                "VARIABLE: {'operand': 0, 'operation': 'set', 'id': 100}",
+                "SHOW_TEXT: {'text': 'Ngày mười tám, trận Chi Lăng, Liễu Thăng thất thế,\\nNgày hai mươi, trận Mã Yên, Liễu Thăng cụt đầu,\\nNgày hăm lăm, bá tước Lương Minh bại trận tử vong,\\nNgày hăm tám, thượng thư Lí Khánh cùng kế tự vẫn\\nTrong đoạn văn trên, biện pháp nghệ thuật nào được Nguyễn Trãi sử dụng?'}",
+                "CHOICES: ['So sánh', 'Liệt kê', 'Hoán dụ', 'Nói quá']",
+                "CHOICE_0",
+                "CHOICE_1",
+                    "VARIABLE: {'operand': 1, 'operation': 'add', 'id': 100}",
+                "CHOICE_2",
+                "CHOICE_3",
+                "ENDCHOICES",
+                "SELF_SWITCH_ON: {'id': 'QUESTION2'}"
+            ],
+            "conditions": {
+                "self_switch": "QUESTION1"
+            },
+            "graphic":"5"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"2",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Quân ta đã hạ gục Liễu Thăng vào thời gian nào?'}",
+                "CHOICES: ['Ngày 18', 'Ngày 20', 'Ngày 25', 'Ngày 28']",
+                "CHOICE_0",
+                    "VARIABLE: {'operand': 1, 'operation': 'add', 'id': 100}",
+                "CHOICE_1",
+                "CHOICE_2",
+                "CHOICE_3",
+                "ENDCHOICES",
+                "SELF_SWITCH_ON: {'id': 'QUESTION3'}"
+            ],
+            "conditions": {
+                "self_switch": "QUESTION2"
+            },
+            "graphic":"5"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"2",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Thượng thư Lí Khánh đã cùng kế tự vẫn vào thời gian nào?'}",
+                "CHOICES: ['Ngày 28', 'Ngày 20', 'Ngày 25', 'Ngày 18']",
+                "CHOICE_0",
+                    "VARIABLE: {'operand': 1, 'operation': 'add', 'id': 100}",
+                "CHOICE_1",
+                "CHOICE_2",
+                "CHOICE_3",
+                "ENDCHOICES",
+                "SELF_SWITCH_ON: {'id': 'QUESTION4'}"
+            ],
+            "conditions": {
+                "self_switch": "QUESTION3"
+            },
+            "graphic":"5"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"2",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Sau khi thu phục được quân giặc, tướng quân đã xử trí bọn chúng ra sao?'}",
+                "CHOICES: ['Tha tội chết', 'Cấp lương thảo, xe ngựa cho trở về quê hương', 'Giết sạch không tha để làm gương', 'Hai ý đầu']",
+                "CHOICE_0",
+                "CHOICE_1",
+                "CHOICE_2",
+                "CHOICE_3",
+                    "VARIABLE: {'operand': 1, 'operation': 'add', 'id': 100}",
+                "ENDCHOICES",
+                "SELF_SWITCH_ON: {'id': 'QUESTION5'}"
+            ],
+            "conditions": {
+                "self_switch": "QUESTION4"
+            },
+            "graphic":"5"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"2",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tại sao khi thu phục được giặc dữ, tướng quân lại không giết sạch để làm gương và âu cũng là trừ mầm móng hậu họa cho dân tộc?'}",
+                "CHOICES: ['Đức hiếu sinh, lòng nhân đạo của dân tộc ta', 'Tình yêu hòa bình', 'Sách lược để tính kế lâu dài, bền vững cho non sông', 'Cả 3 ý trên']",
+                "CHOICE_0",
+                "CHOICE_1",
+                "CHOICE_2",
+                "CHOICE_3",
+                    "VARIABLE: {'operand': 1, 'operation': 'add', 'id': 100}",
+                "ENDCHOICES",
+                "SELF_SWITCH_ON: {'id': 'QUESTION6'}"
+            ],
+            "conditions": {
+                "self_switch": "QUESTION5"
+            },
+            "graphic":"5"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"2",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Hãy lựa chọn đáp án phù hợp để thể hiện đúng đặc điểm, tính chất giọng điệu trong đoạn “Trọn hay…..Cũng là chưa từng thấy xưa nay”'}",
+                "CHOICES: ['Giọng trầm tĩnh tổng kết quy luật lịch sử và hy vọng vào thời kì mới.', 'Giọng tự sự, tâm tình, chân thành, tha thiết.', 'Giọng triết lí, đầy tự hào về truyền thống dân tộc.', 'Giọng ngậm ngùi, xót xa, căm giận', 'Giọng hào hùng, phấn khởi, tự hào.']",
+                "CHOICE_0",
+                "CHOICE_1",
+                "CHOICE_2",
+                "CHOICE_3",
+                "CHOICE_4",
+                    "VARIABLE: {'operand': 1, 'operation': 'add', 'id': 100}",
+                "ENDCHOICES",
+                "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}"
+            ],
+            "conditions": {
+                "self_switch": "QUESTION6"
+            },
+            "graphic":"5"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân trả lời sai quá nhiều, Ngài hãy tìm hiểu thêm'}",
+                "SELF_SWITCH_ON: {'id': 'RETRY'}",
+                "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "FAIL_NOTIFY"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân đã sẵn sàng chưa?'}",
+                "CHOICES: ['bắt đầu', 'lát nữa']",
+                "CHOICE_0",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION1'}",
+                    "SELF_SWITCH_OFF: {'id': 'QUESTION2'}",
+                    "SELF_SWITCH_OFF: {'id': 'QUESTION3'}",
+                    "SELF_SWITCH_OFF: {'id': 'QUESTION4'}",
+                    "SELF_SWITCH_OFF: {'id': 'QUESTION5'}",
+                    "SELF_SWITCH_OFF: {'id': 'QUESTION6'}",
+                    "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}",
+                    "SELF_SWITCH_OFF: {'id': 'RETRY'}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "RETRY"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "speed": "0.5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Chúc mừng, tướng quân thật tuyệt vời'}",
+                "SHOW_TEXT: {'text': 'Tướng quân hãy xuống núi, nơi thành trì của quân ta để tuyên bố chiến thắng cho nhân dân được biết'}",
+                "SWITCHES_ON: {'id': 'MAP_2_XUONGNUI'}",
+                "SELF_SWITCH_ON: {'id': 'DI_DANG_CO'}"
+            ],
+            "conditions":
+            {
+                "variable": 100,
+                "variable_value": 3
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "speed": "0.5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Hãy xuống núi, thần sẽ chờ Ngài ở đó. Hãy đi theo hướng Đông Nam'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "DI_DANG_CO"
+            },
+            "graphic":"3"
+        }
+    ]
+]

@@ -1,26 +1,40 @@
 [
     {
-        "id":"3",
-        "x":"13",
-        "y":"2",
-        "name": "EV-3",
-        "desc": "Transfer to MAP-2"
+        "id":"5",
+        "x":"5",
+        "y":"5",
+        "name": "MAP-10-EV-3",
+        "desc": "Trao binh thư"
     },
     [
         {
-            "trigger":"contact",
+            "trigger":"action_button",
             "frequence":"2",
             "type":"fixed",
             "speed":"0.3",
             "commands":
             [
-                "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':37,'y': 2, 'id':2}}"
+                "SHOW_TEXT: {'text': 'Đây là binh thư tướng quân cần, mau mau quay về dẹp tan giặc Minh'}",
+                "SWITCHES_ON: {'id': 'STAGE_3_FINISH'}"
             ],
             "conditions": {
-                "switch_1": "NGUYENTRAI_DONE",
-                "switch_2": "THODIA_DONE"
+                "switch_1": "MAP_6_CHO_BINH_THU"
             },
-            "graphic":"0"
+            "graphic":"3"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Mau mau quay về, binh lính đang rất cần Ngài'}"
+            ],
+            "conditions": {
+                "switch_1": "STAGE_3_FINISH"
+            },
+            "graphic":"3"
         }
     ]
 ]

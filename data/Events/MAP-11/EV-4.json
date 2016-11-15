@@ -1,0 +1,121 @@
+[
+    {
+        "id":"8",
+        "x":"4",
+        "y":"9",
+        "name":"MAP11-EV-4",
+        "desc": "Đạo sĩ"
+    },
+    [
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"fixed",
+            "speed":"2",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Ngươi gặp đệ tử của ta chưa?'}"
+            ],
+            "conditions": {
+                "switch_off_1": "MAP_11_DE_TU"
+            },
+            "graphic": "2"
+        },
+        {
+            "trigger":"on_vision",
+            "frequence":"5",
+            "type":"fixed",
+            "speed":"2",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Cuối cùng Ngươi cũng đã sẵn sàng'}",
+                "SHOW_TEXT: {'text': 'Ta sẽ cho Ngươi qua nếu ngươi có thể trả lời đúng câu hỏi của ta'}",
+                "SELF_SWITCH_ON: {'id': 'QUESTION1'}"
+            ],
+            "conditions": {
+                "switch_1": "MAP_11_DE_TU"
+            },
+            "graphic": "2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Ta nghe rằng Nguyễn Trãi đã cất tiếng nói:\\n“Âu cũng nhờ trời đất tổ tông khôn thiêng ngầm giúp đỡ mới được như vây.\\nThan ôi!\\nMột cổ nhung y chiến thắng nên công oanh liệt ngàn năm...”'}",
+                "SHOW_TEXT: {'text': 'Lê Lợi hãy cho ta biết, bài học lịch sử rút ra đó là gì?'}",
+                "CHOICES: ['Sức mạnh truyền thống (nhờ tổ tiên, cha ông ta)', 'Sức mạnh hiện đại (ý chí quật cường của quân và dân ta)', 'Sự kết hợp giữa sức mạnh truyền thồng và sức mạnh hiện đại', 'Không nhờ một sức mạnh nào cả']",
+                "CHOICE_0",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'FAILED'}",
+                "CHOICE_1",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'FAILED'}",
+                "CHOICE_2",
+                    "SHOW_TEXT: {'text': 'Chúc mừng tướng quân, Ngươi hãy vô trong thành'}",
+                    "SWITCHES_ON: {'id': 'MAP_11_DAOSI'}",
+                "CHOICE_3",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'FAILED'}",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "QUESTION1"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Lê Lợi, ngươi cần học lại rồi'}",
+                "SELF_SWITCH_ON: {'id': 'RETRY'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "FAILED"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Ngươi đã sẵn sàng chưa?'}",
+                "CHOICES: ['bắt đầu', 'lát nữa']",
+                "CHOICE_0",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION1'}",
+                    "SELF_SWITCH_OFF: {'id': 'FAILED'}",
+                    "SELF_SWITCH_OFF: {'id': 'RETRY'}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "RETRY"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "speed": "0.5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Hãy vô trong thành.'}"
+            ],
+            "conditions":
+            {
+                "switch_1": "MAP_11_DAOSI"
+            },
+            "graphic":"3"
+        }
+    ]
+]

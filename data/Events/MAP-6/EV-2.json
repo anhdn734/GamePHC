@@ -1,6 +1,6 @@
 [
     {
-        "id":"2",
+        "id":"38",
         "x":"20",
         "y":"12",
         "name": "MAP-8-EV-2",
@@ -47,6 +47,44 @@
             ],
             "conditions": {
                 "switch_1": "MAP_6_DATHONGBAO"
+            },
+            "graphic":"5"
+        },
+        {
+            "trigger":"on_vision",
+            "frequence": "5",
+            "type":"fixed",
+            "speed": "0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text' : 'Hỡi những con dân đất Việt, ta đây đã trải qua bao khó khăn, khổ ải để lấy được Binh thư, dù cho có được cuốn binh pháp bí truyền trong tay mà không luyện rèn cũng như vô nghĩa.'}",
+                "SHOW_TEXT: {'text' : 'Vậy nên chúng ta hãy dốc sức luyện thành môn võ nghệ này để có thể dẹp tan bọn giặc ngoại xâm đang tung hoành ngoài kia.'}",
+                "WAIT: {'frame': 100}",
+                "SHOW_TEXT: {'text' : 'Hai bên chiến đấu dữ dội, Tuyên Đức động binh không ngừng, Thạnh Thăng phải đem quân tới cứu viện. Quân ta điều binh thủ hiểm, chặt mũi tiên phong, chặn đường, tuyệt nguồn lương thực của giặc.'}",
+                "SHOW_TEXT: {'text' : 'Ngày mười tám, trận Chi Lăng. Liễu Thăng thất thế, ngày hai mươi, trận Mã Anh, Liễu Thăng cụt đầu,  ngày hăm lăm, Lương Minh tử vong, ngày hăm tám, Lý Khánh tự vẫn'}",
+                "SHOW_TEXT: {'text' : 'Quân ta toàn thắng'}",
+                "WAIT: {'frame': 100}",
+                "SHOW_TEXT: {'text' : 'Thời gian qua quân ta đã chiến đấu vô cùng oanh liệt, không quản hy sinh, đã có nhiều anh em ngã xuống vì dân tộc Đại Việt để giờ đây ta được đứng trên dải đất không còn bóng quân thù, dân tộc Đại Việt được bình yên.'}",
+                "SHOW_TEXT: {'text' : 'Mọi người đã quá vất vả rồi'}",
+                "SHOW_TEXT: {'text' : 'Nguyễn Trãi đã về căn cứ, ta hãy về đó'}",
+                "SELF_SWITCH_ON: {'id': 'DONE'}"
+            ],
+            "conditions": {
+                "switch_1": "STAGE_3_FINISH"
+            },
+            "graphic":"5"
+        },
+        {
+            "trigger":"action_button",
+            "frequence": "5",
+            "type":"fixed",
+            "speed": "0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text' : 'Nguyễn Trãi đã về căn cứ, tướng quân hãy về đó'}"
+            ],
+            "conditions": {
+                "self_switch": "DONE"
             },
             "graphic":"5"
         }

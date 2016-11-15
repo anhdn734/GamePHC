@@ -1,0 +1,25 @@
+[
+    {
+        "id":"21",
+        "x":"31",
+        "y":"21",
+        "name": "MAP2-EV-9",
+        "desc": "Xuống núi"
+    },
+    [
+        {
+            "trigger":"contact",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':17,'y': 2, 'id':11}}"
+            ],
+            "conditions": {
+                "switch_1": "MAP_2_XUONGNUI"
+            },
+            "graphic":"2"
+        }
+    ]
+]

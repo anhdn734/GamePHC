@@ -1,6 +1,6 @@
 [
     {
-        "id":"3",
+        "id":"15",
         "x":"10",
         "y":"12",
         "name": "EV-3",
@@ -344,6 +344,20 @@
                 "switch_1": "NOT_READY_TO_ANSWER"
             },
             "graphic":"3"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "speed": "0.5",
+            "type":"fixed",
+            "commands":
+            [
+                "ERASE_EVENT: true"
+            ],
+            "conditions":
+            {
+                "switch_1": "STAGE_3_FINISH"
+            }
         }
     ]
 ]

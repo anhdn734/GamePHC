@@ -1,0 +1,104 @@
+[
+    {
+        "id":"6",
+        "x":"9",
+        "y":"1",
+        "name":"MAP-11-EV-2",
+        "desc": "Gặp mục đồng"
+    },
+    [
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"fixed",
+            "speed":"2",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Chào tướng quân, tôi là đệ tử của đạo sĩ. Ngài ấy bảo tôi cầm \\\"bản tuyên ngôn\\\" rồi chờ ở đây.'}",
+                "SHOW_TEXT: {'text': 'Nếu Ngài muốn lấy nó thì phải trả lời đúng câu hỏi của tôi'}",
+                "SELF_SWITCH_ON: {'id': 'QUESTION1'}"
+            ],
+            "conditions": {},
+            "graphic": "2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân hãy nêu bật lại như thế nào là thời đại hưng thịnh?'}",
+                "CHOICES: ['Thái bình, hòa bình', 'Đất nước vững bền', 'Mở ra một thời đại mới', 'Cả 3 ý trên']",
+                "CHOICE_0",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_1",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_2",
+                    "SHOW_TEXT: {'text': 'Chưa đúng'}",
+                    "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
+                "CHOICE_3",
+                    "SHOW_TEXT: {'text': 'Chúc mừng tướng quân, Ngài hãy cầm lấy bản tuyên ngôn này và đi gặp sư phụ của ta'}",
+                    "SWITCHES_ON: {'id': 'MAP_11_DE_TU'}",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "QUESTION1"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân cần học lại rồi'}",
+                "SELF_SWITCH_ON: {'id': 'RETRY'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "FAIL_NOTIFY"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Ngươi đã sẵn sàng chưa?'}",
+                "CHOICES: ['bắt đầu', 'lát nữa']",
+                "CHOICE_0",
+                    "SELF_SWITCH_ON: {'id': 'QUESTION1'}",
+                    "SELF_SWITCH_OFF: {'id': 'FAIL_NOTIFY'}",
+                    "SELF_SWITCH_OFF: {'id': 'RETRY'}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions":
+            {
+                "self_switch": "RETRY"
+            },
+            "graphic":"3"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "speed": "0.5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Hãy đến gặp sư phụ ta.'}"
+            ],
+            "conditions":
+            {
+                "switch_1": "MAP_11_DE_TU"
+            },
+            "graphic":"3"
+        }
+    ]
+]

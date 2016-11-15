@@ -1,0 +1,28 @@
+[
+    {
+        "id":"4",
+        "x":"36",
+        "y":"15",
+        "name": "MAP-10-EV-1",
+        "desc": "Qua bên kia sông"
+    },
+    [
+        {
+            "trigger":"action_button",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text' : 'Tướng quân có muốn qua sông không?'}",
+                "CHOICES: ['Có', 'Không']",
+                "CHOICE_0",
+                    "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':10,'y': 7, 'id':9}}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions": {},
+            "graphic":"5"
+        }
+    ]
+]

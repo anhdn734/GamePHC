@@ -1,6 +1,6 @@
 [
     {
-        "id":"1",
+        "id":"37",
         "x":"5",
         "y":"14",
         "name":"MAP6-EV-1",
@@ -152,6 +152,21 @@
             "conditions":
             {
                 "switch_1": "MAP_6_TINTUC"
+            },
+            "graphic":"2"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"10",
+            "speed": "0.3",
+            "type":"fixed",
+            "commands":
+            [
+                "ERASE_EVENT: true"
+            ],
+            "conditions":
+            {
+                "switch_1": "STAGE_3_FINISH"
             },
             "graphic":"2"
         }

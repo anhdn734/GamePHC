@@ -1,10 +1,10 @@
 [
     {
-        "id":"3",
-        "x":"13",
-        "y":"2",
-        "name": "EV-3",
-        "desc": "Transfer to MAP-2"
+        "id":"52",
+        "x":"39",
+        "y":"17",
+        "name": "MAP-9-EV-3",
+        "desc": "Trở về trại lính"
     },
     [
         {
@@ -14,13 +14,9 @@
             "speed":"0.3",
             "commands":
             [
-                "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':1,'y': 1, 'id':2}}"
+                "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':1,'y': 9, 'id':8}}"
             ],
-            "conditions": {
-                "switch_1": "NGUYENTRAI_DONE",
-                "switch_2": "THODIA_DONE"
-            },
-            "graphic":"0"
+            "conditions": {}
         }
     ]
 ]

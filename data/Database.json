@@ -119,6 +119,14 @@
                 "SHOW_TEXT: {'text': 'Trước tình hình đó, mùa xuân năm Mậu Tuất 1418, Lê Lợi đã cùng những hào kiệt, đồng chí hướng như Lê Văn An, Lê Sát, Lê Ngân, Nguyễn Trãi ... tất cả 50 tướng văn và tướng võ, chính thức phất cờ khởi nghĩa.'}",
                 "SHOW_TEXT: {'text': 'Trải qua bao nhiêu gian khổ, cuối cùng, Lê Lợi đã khởi nghĩa thành công và chấm dứt chế độ cai trị hơn 20 năm của giặc Minh đồng thời mở ra thời kì độc lập, tự do cho dân tộc.'}"
             ]
+        },
+        "MAP_6_CUOCCHIEN1": {
+            "commands": [
+                "SHOW_TEXT: {'text': 'Quân ta ra trận với khí thế sục sôi, giáp trận với quân địch tại Bồ Đằng, Trà Lân khiến Trần Trí, Sơn Thọ hoảng sợ, Lí An, Phương Chính tìm đường thoát thân.'}",
+                "SHOW_TEXT: {'text': 'Quân ta chiếm lại được Tây Kinh, Đông Đô. Ninh Kiều máu chảy thành sông, Tốt Động thây chất đầy đồng, Trần Hiệp, Lí Lượng bỏ mạng.'}",
+                "SHOW_TEXT: {'text': 'Trước tình thế đó, quân địch không chịu khuất phục, trái lại còn tiếp tục mưu tính, tham công danh. Mã Anh đem quân cứu trận đánh.'}",
+                "SWITCHES_ON: {'id': 'MAP_6_TINTUC'}"
+            ]
         }
     },
     "animations": {
@@ -152,7 +160,7 @@
         "2": {
             "tileset_id":   "51",
             "autotiles_id": "3",
-            "events": ["EV-1", "EV-2", "EV-3", "EV-4", "EV-5", "EV-6", "EV-7"]
+            "events": ["EV-1", "EV-2", "EV-3", "EV-4", "EV-5", "EV-6", "EV-7", "EV-8", "EV-9"]
         },
         "3": {
             "tileset_id":   "13",
@@ -186,19 +194,23 @@
         },
         "9": {
             "tileset_id":   "1",
-            "autotiles_id": "2"
+            "autotiles_id": "2",
+            "events": ["EV-1", "EV-3"]
         },
         "10": {
             "tileset_id":   "2",
-            "autotiles_id": "9"
+            "autotiles_id": "9",
+            "events": ["EV-1", "EV-3"]
         },
         "11": {
             "tileset_id":   "2",
-            "autotiles_id": "9"
+            "autotiles_id": "9",
+            "events": ["EV-2", "EV-3", "EV-4"]
         },
         "12": {
             "tileset_id":   "25",
-            "autotiles_id": "10"
+            "autotiles_id": "10",
+            "events": ["EV-1"]
         },
         "13": {
             "tileset_id":   "23",
