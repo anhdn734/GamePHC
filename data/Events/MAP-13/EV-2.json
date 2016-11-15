@@ -18,7 +18,7 @@
                 "SELF_SWITCH_ON: {'id': 'Q_PREPARE'}"
             ],
             "conditions": {},
-            "graphic": "4"
+            "graphic":"5"
         },
         {
             "trigger":"action_button",
@@ -32,7 +32,7 @@
             "conditions": {
                 "switch_off_1": "MAP_2_CONIEMTIN"
             },
-            "graphic": "4"
+            "graphic":"5"
         },
         {
             "trigger":"action_button",
@@ -46,7 +46,7 @@
             "conditions": {
                 "switch_off_1": "STAGE_1_FINISH"
             },
-            "graphic": "4"
+            "graphic":"5"
         },
         {
             "trigger":"auto",
@@ -61,7 +61,7 @@
             {
                 "self_switch": "Q_PREPARE"
             },
-            "graphic":"2"
+            "graphic":"5"
         },
         {
             "trigger":"auto",
@@ -88,7 +88,7 @@
             {
                 "self_switch": "QUESTION1"
             },
-            "graphic":"2"
+            "graphic":"5"
         },
         {
             "trigger":"action_button",
@@ -109,7 +109,7 @@
             {
                 "self_switch": "RETRY"
             },
-            "graphic":"2"
+            "graphic":"5"
         },
         {
             "trigger":"action_button",
@@ -124,7 +124,7 @@
             {
                 "switch_1": "NOT_READY_TO_ANSWER"
             },
-            "graphic":"2"
+            "graphic":"5"
         },
         {
             "trigger":"auto",
@@ -141,7 +141,7 @@
             {
                 "self_switch": "FAIL_NOTIFY"
             },
-            "graphic":"2"
+            "graphic":"5"
         },
         {
             "trigger":"action_button",
@@ -156,7 +156,7 @@
             {
                 "self_switch": "TRALOIDUNG"
             },
-            "graphic":"2"
+            "graphic":"5"
         }
     ]
 ]

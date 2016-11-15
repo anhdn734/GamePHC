@@ -19,7 +19,7 @@
             "conditions": {
                 "switch_off_1": "MAP_11_DE_TU"
             },
-            "graphic": "2"
+            "graphic":"36"
         },
         {
             "trigger":"on_vision",
@@ -35,7 +35,7 @@
             "conditions": {
                 "switch_1": "MAP_11_DE_TU"
             },
-            "graphic": "2"
+            "graphic":"36"
         },
         {
             "trigger":"auto",
@@ -64,7 +64,7 @@
             {
                 "self_switch": "QUESTION1"
             },
-            "graphic":"3"
+            "graphic":"36"
         },
         {
             "trigger":"auto",
@@ -79,7 +79,7 @@
             {
                 "self_switch": "FAILED"
             },
-            "graphic":"3"
+            "graphic":"36"
         },
         {
             "trigger":"action_button",
@@ -100,7 +100,7 @@
             {
                 "self_switch": "RETRY"
             },
-            "graphic":"3"
+            "graphic":"36"
         },
         {
             "trigger":"action_button",
@@ -115,7 +115,7 @@
             {
                 "switch_1": "MAP_11_DAOSI"
             },
-            "graphic":"3"
+            "graphic":"36"
         }
     ]
 ]

@@ -19,8 +19,7 @@
             "conditions": {
                 "switch_1": "MAP_1_NGUYENTRAI",
                 "switch_2": "MAP_1_THODIA"
-            },
-            "graphic":"0"
+            }
         }
     ]
 ]

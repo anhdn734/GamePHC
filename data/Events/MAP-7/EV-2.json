@@ -20,7 +20,7 @@
             "conditions": {
                 "switch_1": "MAP_13_CHUTHANH"
             },
-            "graphic":"6"
+            "graphic":"147"
         },
         {
             "trigger": "auto",
@@ -45,7 +45,7 @@
             "conditions": {
                 "self_switch": "QUESTION1"
             },
-            "graphic":"6"
+            "graphic":"147"
         },
         {
             "trigger": "action_button",
@@ -59,7 +59,7 @@
             "conditions": {
                 "switch_off_1": "STAGE_1_FINISH"
             },
-            "graphic":"6"
+            "graphic":"147"
         },
         {
             "trigger": "action_button",
@@ -73,7 +73,7 @@
             "conditions": {
                 "switch_off_1": "MAP_2_CONIEMTIN"
             },
-            "graphic":"6"
+            "graphic":"147"
         },
         {
             "trigger":"auto",
@@ -89,7 +89,7 @@
             {
                 "self_switch": "FAIL_NOTIFY"
             },
-            "graphic":"6"
+            "graphic":"147"
         },
         {
             "trigger":"action_button",
@@ -110,7 +110,7 @@
             {
                 "self_switch": "RETRY"
             },
-            "graphic":"6"
+            "graphic":"147"
         },
         {
             "trigger":"action_button",
@@ -125,7 +125,7 @@
             {
                 "switch_1": "MAP_7_DUMUC"
             },
-            "graphic":"6"
+            "graphic":"147"
         },
         {
             "trigger":"action_button",
@@ -140,7 +140,7 @@
             {
                 "self_switch": "MAP_7_CONGAIDUMUC"
             },
-            "graphic":"6"
+            "graphic":"147"
         }
     ]
 ]

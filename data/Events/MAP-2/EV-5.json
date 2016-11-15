@@ -19,7 +19,7 @@
                 "switch_1" : "MAP_2_CONIEMTIN",
                 "self_switch_off": "DA_GIOI_THIEU"
             },
-            "graphic":"6"
+            "graphic":"109"
         },
         {
             "trigger":"action_button",
@@ -33,7 +33,7 @@
                 "self_switch": "DA_GIOI_THIEU",
                 "switch_off_1": "MAP_4_MOSAT"
             },
-            "graphic":"6"
+            "graphic":"109"
         },
         {
             "trigger":"action_button",
@@ -47,7 +47,7 @@
                 "self_switch": "DA_GIOI_THIEU",
                 "switch_2": "MAP_4_MOSAT"
             },
-            "graphic":"6"
+            "graphic":"109"
         },
         {
             "trigger":"action_button",
@@ -59,7 +59,7 @@
             "conditions": {
                 "switch_off_1" : "MAP_2_CONIEMTIN"
             },
-            "graphic":"6"
+            "graphic":"109"
         }
     ]
 ]

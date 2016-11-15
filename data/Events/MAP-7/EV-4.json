@@ -18,7 +18,7 @@
                 "SWITCHES_ON: {'id': 'MAP_7_DAGAPCONGAIDUMUC'}"
             ],
             "conditions": {},
-            "graphic":"6"
+            "graphic":"8"
         },
         {
             "trigger": "action_button",
@@ -34,7 +34,7 @@
             "conditions": {
                 "switch_1" : "MAP_7_DALAYDUOCBONGHOA"
             },
-            "graphic":"6"
+            "graphic":"8"
         },
         {
             "trigger": "action_button",
@@ -48,7 +48,7 @@
             "conditions": {
                 "switch_off_1" : "MAP_2_CONIEMTIN"
             },
-            "graphic":"6"
+            "graphic":"8"
         },
         {
             "trigger": "action_button",
@@ -62,7 +62,7 @@
             "conditions": {
                 "switch_off_1" : "MAP_13_CHUTHANH"
             },
-            "graphic":"6"
+            "graphic":"8"
         }
     ]
 ]

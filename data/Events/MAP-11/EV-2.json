@@ -19,7 +19,7 @@
                 "SELF_SWITCH_ON: {'id': 'QUESTION1'}"
             ],
             "conditions": {},
-            "graphic": "2"
+            "graphic":"146"
         },
         {
             "trigger":"auto",
@@ -47,7 +47,7 @@
             {
                 "self_switch": "QUESTION1"
             },
-            "graphic":"3"
+            "graphic":"146"
         },
         {
             "trigger":"auto",
@@ -62,7 +62,7 @@
             {
                 "self_switch": "FAIL_NOTIFY"
             },
-            "graphic":"3"
+            "graphic":"146"
         },
         {
             "trigger":"action_button",
@@ -83,7 +83,7 @@
             {
                 "self_switch": "RETRY"
             },
-            "graphic":"3"
+            "graphic":"146"
         },
         {
             "trigger":"action_button",
@@ -98,7 +98,7 @@
             {
                 "switch_1": "MAP_11_DE_TU"
             },
-            "graphic":"3"
+            "graphic":"146"
         }
     ]
 ]

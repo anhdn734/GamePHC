@@ -20,7 +20,7 @@
             "conditions": {
                 "switch_1": "MAP_8_FINISH"
             },
-            "graphic":"4"
+            "graphic":"49"
         },
         {
             "trigger":"action_button",
@@ -39,7 +39,7 @@
                 "switch_1": "MAP_8_FINISH",
                 "self_switch": "MOVE_FINISH"
             },
-            "graphic":"4"
+            "graphic":"49"
         }
     ]
 ]

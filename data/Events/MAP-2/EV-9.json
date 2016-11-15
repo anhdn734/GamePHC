@@ -18,8 +18,7 @@
             ],
             "conditions": {
                 "switch_1": "MAP_2_XUONGNUI"
-            },
-            "graphic":"2"
+            }
         }
     ]
 ]

@@ -20,7 +20,7 @@
             "conditions": {
                 "switch_1": "MAP_6_CHO_BINH_THU"
             },
-            "graphic":"3"
+            "graphic":"142"
         },
         {
             "trigger":"action_button",
@@ -34,7 +34,7 @@
             "conditions": {
                 "switch_1": "STAGE_3_FINISH"
             },
-            "graphic":"3"
+            "graphic":"142"
         }
     ]
 ]

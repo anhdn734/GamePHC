@@ -15,8 +15,7 @@
             "commands":
             [
                 "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':7,'y': 10, 'id':2}}"
-            ],
-            "graphic":"0"
+            ]
         }
     ]
 ]

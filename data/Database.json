@@ -185,7 +185,7 @@
         "7": {
             "tileset_id":   "6",
             "autotiles_id": "8",
-            "events": ["EV-1", "EV-2", "EV-3", "EV-4",  "EV-5", "EV-6"]
+            "events": ["EV-1", "EV-2", "EV-3", "EV-4", "EV-5", "EV-6"]
         },
         "8": {
             "tileset_id":   "1",

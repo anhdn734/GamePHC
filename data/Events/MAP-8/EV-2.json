@@ -21,7 +21,7 @@
                 "SELF_SWITCH_ON: {'id': 'QUESTION1'}"
             ],
             "conditions": {},
-            "graphic": "4"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -35,7 +35,7 @@
             "conditions": {
                 "switch_off_1": "MAP_2_CONIEMTIN"
             },
-            "graphic": "4"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -49,7 +49,7 @@
             "conditions": {
                 "switch_off_1": "STAGE_2_FINISH"
             },
-            "graphic": "4"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -74,7 +74,7 @@
             {
                 "self_switch": "QUESTION1"
             },
-            "graphic":"2"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -95,7 +95,7 @@
             {
                 "self_switch": "RETRY"
             },
-            "graphic":"2"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -110,7 +110,7 @@
             {
                 "switch_1": "NOT_READY_TO_ANSWER"
             },
-            "graphic":"2"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -127,7 +127,7 @@
             {
                 "self_switch": "FAIL_NOTIFY"
             },
-            "graphic":"2"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -148,7 +148,7 @@
             {
                 "switch_1": "MAP_8_FINISH"
             },
-            "graphic":"2"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -163,7 +163,7 @@
             {
                 "self_switch": "HAY_TOI_NOI_DUY_AC"
             },
-            "graphic":"2"
+            "graphic":"112"
         }
     ]
 ]

@@ -20,7 +20,7 @@
             "conditions": {
                 "switch_1": "MAP_6_TINTUC"
             },
-            "graphic":"5"
+            "graphic":"49"
         },
         {
             "trigger":"auto",
@@ -34,7 +34,7 @@
             "conditions": {
                 "self_switch": "MAP_6_DATHONGBAO"
             },
-            "graphic":"5"
+            "graphic":"49"
         },
         {
             "trigger":"action_button",
@@ -48,7 +48,7 @@
             "conditions": {
                 "switch_1": "MAP_6_DATHONGBAO"
             },
-            "graphic":"5"
+            "graphic":"49"
         },
         {
             "trigger":"on_vision",
@@ -72,7 +72,7 @@
             "conditions": {
                 "switch_1": "STAGE_3_FINISH"
             },
-            "graphic":"5"
+            "graphic":"49"
         },
         {
             "trigger":"action_button",
@@ -86,7 +86,7 @@
             "conditions": {
                 "self_switch": "DONE"
             },
-            "graphic":"5"
+            "graphic":"49"
         }
     ]
 ]

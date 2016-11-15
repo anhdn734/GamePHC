@@ -19,7 +19,7 @@
             "conditions": {
                 "switch_1": "STAGE_3_FINISH"
             },
-            "graphic":"5"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -41,7 +41,7 @@
             "conditions": {
                 "self_switch": "QUESTION1"
             },
-            "graphic":"5"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -62,7 +62,7 @@
             "conditions": {
                 "self_switch": "QUESTION2"
             },
-            "graphic":"5"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -83,7 +83,7 @@
             "conditions": {
                 "self_switch": "QUESTION3"
             },
-            "graphic":"5"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -104,7 +104,7 @@
             "conditions": {
                 "self_switch": "QUESTION4"
             },
-            "graphic":"5"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -125,7 +125,7 @@
             "conditions": {
                 "self_switch": "QUESTION5"
             },
-            "graphic":"5"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -147,7 +147,7 @@
             "conditions": {
                 "self_switch": "QUESTION6"
             },
-            "graphic":"5"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -163,7 +163,7 @@
             {
                 "self_switch": "FAIL_NOTIFY"
             },
-            "graphic":"3"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -189,7 +189,7 @@
             {
                 "self_switch": "RETRY"
             },
-            "graphic":"3"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -208,7 +208,7 @@
                 "variable": 100,
                 "variable_value": 3
             },
-            "graphic":"3"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -223,7 +223,7 @@
             {
                 "self_switch": "DI_DANG_CO"
             },
-            "graphic":"3"
+            "graphic":"112"
         }
     ]
 ]

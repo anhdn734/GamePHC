@@ -22,7 +22,7 @@
                 "SWITCHES_ON: {'id': 'GAME_OVER'}"
             ],
             "conditions": {},
-            "graphic": "2"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -36,7 +36,7 @@
             "conditions": {
                 "switch_1": "GAME_OVER"
             },
-            "graphic": "2"
+            "graphic":"112"
         }
     ]
 ]

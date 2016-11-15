@@ -17,7 +17,7 @@
                 "SHOW_TEXT: {'text': 'Ngươi dám đi một mình ra đây? Trong thời kì loạn lạc này, hãy cẩn thận cái mạng'}"
             ],
             "conditions": {},
-            "graphic":"5"
+            "graphic":"202"
         },
         {
             "trigger":"action_button",
@@ -31,7 +31,7 @@
             "conditions": {
                 "switch_1": "MAP_2_CONIEMTIN"
             },
-            "graphic":"5"
+            "graphic":"202"
         },
         {
             "trigger":"action_button",
@@ -46,7 +46,7 @@
             "conditions": {
                 "switch_1": "MAP_4_MOSAT"
             },
-            "graphic":"5"
+            "graphic":"202"
         },
         {
             "trigger": "auto",
@@ -72,11 +72,12 @@
             "conditions": {
                 "self_switch": "QUESTION1"
             },
-            "graphic":"6"
+            "graphic":"202"
         },
         {
             "trigger":"auto",
             "frequence":"5",
+            "speed": "0.3",
             "type":"fixed",
             "commands":
             [
@@ -88,11 +89,12 @@
             {
                 "self_switch": "FAIL_NOTIFY"
             },
-            "graphic":"6"
+            "graphic":"202"
         },
         {
             "trigger":"action_button",
             "frequence":"5",
+            "speed": "0.3",
             "type":"random",
             "commands":
             [
@@ -109,11 +111,12 @@
             {
                 "self_switch": "RETRY"
             },
-            "graphic":"6"
+            "graphic":"202"
         },
         {
             "trigger":"action_button",
             "frequence":"5",
+            "speed": "0.3",
             "type":"random",
             "commands":
             [
@@ -123,7 +126,7 @@
             {
                 "switch_1": "MAP_2_DADAUQUAN"
             },
-            "graphic":"6"
+            "graphic":"202"
         }
     ]
 ]

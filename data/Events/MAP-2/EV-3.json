@@ -18,7 +18,7 @@
                 "SELF_SWITCH_ON: {'id': 'QUESTION1'}"
             ],
             "conditions": {},
-            "graphic":"5"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -43,7 +43,7 @@
             "conditions": {
                 "self_switch": "QUESTION1"
             },
-            "graphic":"5"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -69,7 +69,7 @@
             "conditions": {
                 "self_switch": "QUESTION2"
             },
-            "graphic":"5"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -85,7 +85,7 @@
             {
                 "self_switch": "FAIL_NOTIFY"
             },
-            "graphic":"3"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -107,7 +107,7 @@
             {
                 "self_switch": "RETRY"
             },
-            "graphic":"3"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -123,7 +123,7 @@
                 "switch_1": "MAP_2_CONIEMTIN",
                 "switch_off_1": "MAP_3_MUALUONGTHUC"
             },
-            "graphic":"3"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -140,7 +140,7 @@
                 "switch_2": "MAP_3_MUALUONGTHUC",
                 "switch_off_1": "MAP_4_MOSAT"
             },
-            "graphic":"3"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -157,7 +157,7 @@
                 "switch_2": "MAP_3_MUALUONGTHUC",
                 "switch_3": "MAP_4_MOSAT"
             },
-            "graphic":"3"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -172,7 +172,7 @@
             {
                 "switch_1": "MAP_2_STAGE2"
             },
-            "graphic":"3"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -189,7 +189,7 @@
                 "switch_1": "MAP_2_STAGE2",
                 "switch_2": "MAP_2_DADAUQUAN"
             },
-            "graphic":"3"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -216,7 +216,7 @@
             "conditions": {
                 "self_switch": "QUESTION3"
             },
-            "graphic":"5"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -244,7 +244,7 @@
             "conditions": {
                 "self_switch": "QUESTION4"
             },
-            "graphic":"5"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -260,7 +260,7 @@
             {
                 "self_switch": "FAIL_NOTIFY2"
             },
-            "graphic":"3"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -282,7 +282,7 @@
             {
                 "self_switch": "RETRY2"
             },
-            "graphic":"3"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -298,7 +298,7 @@
             {
                 "self_switch": "TRALOIDUNG2"
             },
-            "graphic":"3"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -313,7 +313,7 @@
             {
                 "self_switch": "MAP_2_TOIKIMCCACTU"
             },
-            "graphic":"3"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -328,7 +328,7 @@
             {
                 "self_switch": "STAGE_2_FINISH"
             },
-            "graphic":"3"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -343,7 +343,7 @@
             {
                 "switch_1": "NOT_READY_TO_ANSWER"
             },
-            "graphic":"3"
+            "graphic":"112"
         },
         {
             "trigger":"auto",

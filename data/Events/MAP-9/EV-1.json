@@ -18,7 +18,7 @@
                 "SELF_SWITCH_ON: {'id': 'Q_PREPARE'}"
             ],
             "conditions": {},
-            "graphic": "4"
+            "graphic":"86"
         },
         {
             "trigger":"auto",
@@ -34,7 +34,7 @@
             {
                 "self_switch": "Q_PREPARE"
             },
-            "graphic":"2"
+            "graphic":"86"
         },
         {
             "trigger":"auto",
@@ -60,7 +60,7 @@
             {
                 "self_switch": "QUESTION1"
             },
-            "graphic":"2"
+            "graphic":"86"
         },
         {
             "trigger":"auto",
@@ -91,7 +91,7 @@
             {
                 "self_switch": "QUESTION2"
             },
-            "graphic":"2"
+            "graphic":"86"
         },
         {
             "trigger":"action_button",
@@ -112,7 +112,7 @@
             {
                 "self_switch": "RETRY"
             },
-            "graphic":"2"
+            "graphic":"86"
         },
         {
             "trigger":"action_button",
@@ -127,7 +127,7 @@
             {
                 "switch_1": "NOT_READY_TO_ANSWER"
             },
-            "graphic":"2"
+            "graphic":"86"
         },
         {
             "trigger":"auto",
@@ -144,7 +144,7 @@
             {
                 "self_switch": "FAIL_NOTIFY"
             },
-            "graphic":"2"
+            "graphic":"86"
         },
         {
             "trigger":"action_button",
@@ -164,7 +164,7 @@
             {
                 "switch_1": "MAP_9_THANSONG"
             },
-            "graphic":"2"
+            "graphic":"86"
         }
     ]
 ]

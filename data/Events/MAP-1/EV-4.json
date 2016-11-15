@@ -20,7 +20,7 @@
             "conditions": {
                 "switch_1": "MAP_1_NGUYENTRAI"
             },
-            "graphic":"3",
+            "graphic":"37",
             "graphic-params": {
                 "direction": "left"
             }
@@ -39,7 +39,7 @@
             "conditions": {
                 "switch_off_1": "MAP_1_NGUYENTRAI"
             },
-            "graphic":"3",
+            "graphic":"37",
             "graphic-params": {
                 "direction": "left"
             }
@@ -71,7 +71,7 @@
             {
                 "self_switch": "CAU1"
             },
-            "graphic":"3"
+            "graphic":"37"
         },
         {
             "trigger":"auto",
@@ -87,7 +87,7 @@
             {
                 "self_switch": "FAIL_NOTIFY"
             },
-            "graphic":"3"
+            "graphic":"37"
         },
         {
             "trigger":"action_button",
@@ -108,7 +108,7 @@
             {
                 "self_switch": "RETRY"
             },
-            "graphic":"3"
+            "graphic":"37"
         },
         {
             "trigger":"action_button",
@@ -123,7 +123,7 @@
             {
                 "self_switch": "TRALOIDUNG"
             },
-            "graphic":"3"
+            "graphic":"37"
         }
     ]
 ]

@@ -20,7 +20,7 @@
             "conditions": {
                 "switch_1": "MAP_2_CONIEMTIN"
             },
-            "graphic":"6"
+            "graphic":"108"
         },
         {
             "trigger": "auto",
@@ -46,7 +46,7 @@
             "conditions": {
                 "self_switch": "QUESTION1"
             },
-            "graphic":"6"
+            "graphic":"108"
         },
         {
             "trigger": "action_button",
@@ -60,7 +60,7 @@
             "conditions": {
                 "switch_off_1": "MAP_2_CONIEMTIN"
             },
-            "graphic":"6"
+            "graphic":"108"
         },
         {
             "trigger":"auto",
@@ -76,7 +76,7 @@
             {
                 "self_switch": "FAIL_NOTIFY"
             },
-            "graphic":"6"
+            "graphic":"108"
         },
         {
             "trigger":"action_button",
@@ -97,7 +97,7 @@
             {
                 "self_switch": "RETRY"
             },
-            "graphic":"6"
+            "graphic":"108"
         },
         {
             "trigger":"action_button",
@@ -112,7 +112,7 @@
             {
                 "self_switch": "TRALOIDUNG"
             },
-            "graphic":"6"
+            "graphic":"108"
         }
     ]
 ]

@@ -17,7 +17,7 @@
                 "SHOW_TEXT: {'text': 'Chúc mừng tướng quân! Tướng quân là người được lựa chọn để giải cứu đất nước khỏi lâm nguy. Để có thể thực hiện sứ mệnh của mình, dám xin tướng quân hãy nghe theo sự hướng dẫn của thần.'}",
                 "SELF_SWITCH_ON: {'id': 'BINHNGO'}"
             ],
-            "graphic":"2"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -32,7 +32,7 @@
             {
                 "self_switch": "BINHNGO"
             },
-            "graphic":"2"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -61,7 +61,7 @@
             {
                 "self_switch": "CAU1"
             },
-            "graphic":"2"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -90,7 +90,7 @@
             {
                 "self_switch": "CAU2"
             },
-            "graphic":"2"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -119,7 +119,7 @@
             {
                 "self_switch": "CAU3"
             },
-            "graphic":"2"
+            "graphic":"112"
         },
         {
             "trigger":"auto",
@@ -135,7 +135,7 @@
             {
                 "self_switch": "FAIL_NOTIFY"
             },
-            "graphic":"2"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -159,7 +159,7 @@
             {
                 "self_switch": "RETRY"
             },
-            "graphic":"2"
+            "graphic":"112"
         },
         {
             "trigger":"action_button",
@@ -174,7 +174,7 @@
             {
                 "self_switch": "TRALOIDUNG"
             },
-            "graphic":"2"
+            "graphic":"112"
         }
     ]
 ]
