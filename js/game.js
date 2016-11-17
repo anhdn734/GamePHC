@@ -45,3 +45,16 @@ function wait5s() {
         common.exec();
     }, 2000);
 }
+
+function jumptosection4() {
+    RPGJS.scene.call("Scene_Map", {
+        params: {
+            map_id: 11,
+            pos: {
+                x: 17, y: 2
+            }
+        }
+    }).load(function() {
+        global.game_player.freeze = false;
+    });
+}
