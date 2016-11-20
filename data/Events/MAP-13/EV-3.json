@@ -8,7 +8,7 @@
     },
     [
         {
-            "trigger":"contact",
+            "trigger":"on_vision",
             "frequence":"2",
             "type":"fixed",
             "speed":"0.3",

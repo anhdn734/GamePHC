@@ -124,12 +124,12 @@ RPGJS_Canvas.Scene.New({
             width_init = bar_full.width;
 
         text.font = '20px Verdana';
-        text.fillStyle = 'black';
+        text.fillStyle = 'white';
 
 
         bar_empty.x = _canvas.width / 2 - bar_empty.width / 2;
         bar_empty.y = _canvas.height / 2 - bar_empty.height / 2;
-        bar_empty.strokeStyle = "black";
+        bar_empty.strokeStyle = "white";
        	//bar_empty.strokeRect();
 
        	//bar_full.x = _canvas.width / 2 - bar_empty.width / 2;
@@ -144,7 +144,7 @@ RPGJS_Canvas.Scene.New({
         	pourcent += Math.round(100 / total);
         	//bar_full.width = width_init * (pourcent / 100);
             //bar_full.fillRect("#428bca");
-            text.fillText("Loading " + pourcent + "%", 100, 15);
+            text.fillText("Loading " + pourcent + "%", 70, 15);
         }
 
         function finish() {
@@ -160,7 +160,7 @@ RPGJS_Canvas.Scene.New({
 		RPGJS_Canvas.Materials.load("sounds", sounds, progress, finish);
        	//bar_full.width = width_init;
         //bar_full.fillRect("#428bca");
-        text.fillText("Loading 0%", 100, 15);
+        text.fillText("Loading 0%", 70, 15);
 
 	},
 	nbKeyPress: 0,
@@ -215,7 +215,6 @@ RPGJS_Canvas.Scene.New({
 
 	},
 	tilesetLoad: function() {
-
 		this.spriteset = Class.New("Spriteset_Map", [this, this.stage, this.data, {
 			autotiles: this.data.autotiles_img,
 			actions: this.data.actions

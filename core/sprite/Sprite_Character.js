@@ -32,6 +32,7 @@ Class.create("Sprite_Character", {
 	old_direction: "",
 	direction: "bottom",
 	initial_dir: null,
+	entityset: false,
 	width: 0,
 	height: 0,
 	_actions: {},
@@ -42,58 +43,77 @@ Class.create("Sprite_Character", {
 		this.refresh(data);
 		this.setPosition(this.x, this.y);
 		layer.append(this.entity.el);
-		
+
 	},
-	
+
 	remove: function() {
 		this.entity.el.remove();
 	},
-	
+
 	refresh: function(data) {
 
 		var self = this;
 		if (data) {
-		
+
 			for (var key in data) {
 				this[key] = data[key];
 			}
-			
+
 			this.graphic_params = this.graphic_params || {};
 
 			for (var key in this.graphic_params) {
 				this[key] = this.graphic_params[key] != "" ? this.graphic_params[key] : this[key];
 			}
-			
+
 			if (!this.is_start) {
 				this.direction = data.direction;
 			}
-				
+
 		}
 
 		if (this.regY) this.regY = +this.regY;
 		if (this.regX) this.regX = +this.regX;
 		if (!this.pattern) this.pattern = 0;
-			
+
 		if (!this.exist) {
 			this.entity.el.removeCmd("drawImage");
 			return;
 		}
-		
+
 		if (!this.initial_dir) {
 			this.initial_dir = this.direction;
 		}
-		
+
 		if (+this.graphic) {
-		
+
 			function load() {
 				if (!self.graphic) return;
 				var img = RPGJS_Canvas.Materials.get("characters_" + self.graphic);
 				self.width = img.width / self.nbSequenceX;
 				self.height = img.height / self.nbSequenceY;
-			
+
 				self.entity.el.drawImage("characters_" + self.graphic, 0, 0, self.width, self.height, -self.regX, -self.regY, self.width, self.height);
+
 				self.setAnimation();
 				self.setSpritesheet();
+
+				/* create a name for him */
+				if (self.character_name && !self.entityset) {
+					var char_name = self.scene.createElement();
+					var width = self.scene.getCanvas().measureText(self.character_name, "12px Segoe UI").width;
+					//char_name.fillStyle = "rgba(225,225,225,0.5)";
+					//char_name.opacity = 0.3
+					//char_name.fillRect((self.width - width) / 2 - 6, -38, width + 6, 18);
+					char_name.fillStyle = "white";
+					char_name.font = '12px Segoe UI';
+					char_name.fillText(self.character_name, self.width / 2 - width / 2, -25);
+					//char_name.fillRect(-32, -32, 64, 64);
+					//char_name.opacity = 0.5;
+					// console.log(self.entity.el)
+					self.entity.el.append(char_name);
+					self.entityset = true; /* a little trick to not create any other element */
+				}
+
 				self.stop();
 				if (self.stop_animation) {
 					self.startMove();
@@ -106,24 +126,24 @@ Class.create("Sprite_Character", {
 			this.stop();
 			this.entity.el.removeCmd("drawImage");
 		}
-		
+
 		if (this.opacity != undefined) {
 			this.entity.el.opacity = this.opacity / 255;
 		}
-		
+
 		this.entity.el.regX = this.regX;
 		this.entity.el.regY = this.regY;
 	},
-	
+
 /**
 @doc sprite_character/
 @method getSprite Retrieves the element of sprite
 @return CanvasEngine.Element
-*/		
+*/
 	getSprite: function() {
 		return this.entity.el;
 	},
-	
+
 	setSpritesheet: function() {
 		var array = [], val;
 		for (var i=0 ; i < this.nbSequenceY ; i++) {
@@ -136,10 +156,10 @@ Class.create("Sprite_Character", {
 					case 3:  val = "up"; break;
 				}
 				val += "_" + j;
-				array.push(val); 
+				array.push(val);
 			}
 		}
-		
+
 		this.spritesheet = RPGJS_Canvas.Spritesheet.New("characters_" + this.graphic, {
 		  grid: [{
 			size: [this.nbSequenceX, this.nbSequenceY],
@@ -204,37 +224,37 @@ Class.create("Sprite_Character", {
 
 		this.animation.add(this.entity.el, true);
 	},
-	
+
 	initAnimationActions: function(data) {
-	
-		
+
+
 
 		var seq_x, seq_y, frequence, position, animation, self = this, action, img, seq;
-		
+
 		function setAnimation(id) {
-			
+
 			function finish() {
 				RPGJS_Canvas.Scene.get("Scene_Map").animation(0, data[id]["animation_finish"]);
 				self.stop();
 			}
-			
+
 			action = data[id];
-			
+
 			if (!action.graphic) return;
-			
+
 			if (!action['graphic-params']) action['graphic-params'] = {};
 			if (!action['graphic-params'].nbSequenceX) action['graphic-params'].nbSequenceX = 4;
 			if (!action['graphic-params'].nbSequenceY) action['graphic-params'].nbSequenceY = 4;
 			if (!action['graphic-params'].regX) action['graphic-params'].regX = 0;
 			if (!action['graphic-params'].regY) action['graphic-params'].regY = 0;
-			
-			
+
+
 			img = RPGJS_Canvas.Materials.get("characters_" + action.graphic);
 			seq = {
 				width: img.width / action['graphic-params'].nbSequenceX,
 				height: img.height / action['graphic-params'].nbSequenceY,
 			};
-			
+
 			seq_x = action['graphic-params'].nbSequenceX-1;
 			seq_y = action['graphic-params'].nbSequenceY-1;
 			frequence = action.speed;
@@ -272,7 +292,7 @@ Class.create("Sprite_Character", {
 				 frequence: frequence,
 				 finish: finish
 			 };
-			
+
 			this.action_animation = RPGJS_Canvas.Animation.New({
 			   images: "characters_" + action.graphic,
 			   animations: animation
@@ -280,12 +300,12 @@ Class.create("Sprite_Character", {
 			this.action_animation.add(this.entity.el);
 			this._actions = data;
 		}
-		
+
 		for (var id in data) {
 			setAnimation.call(this, id);
 		}
 	},
-	
+
 	playAnimationAction: function(id) {
 		var dir;
 		if (this._actions[id]) {
@@ -294,16 +314,16 @@ Class.create("Sprite_Character", {
 			RPGJS_Canvas.Scene.get("Scene_Map").animation(0, this._actions[id]["animation_" + dir]);
 		}
 	},
-	
+
 	setParameter: function(name, val) {
 		this[name] = val;
 		this.refresh();
 	},
-	
+
 	setPosition: function(x, y) {
 		this.entity.position(x, y);
 	},
-	
+
 	jumpCharacter: function(x_plus, y_plus, hight, callback) {
 		 this.jumping = true;
 		 var distance = Math.sqrt(x_plus * x_plus + y_plus * y_plus),
@@ -329,29 +349,29 @@ Class.create("Sprite_Character", {
 /**
 @doc sprite_character/
 @method stop Stops the animation
-*/		
+*/
 	stop: function() {
 		var self = this;
 
 		if (!this.animation) return;
 
 		var id = this.getDisplayDirection() + "_" + this.pattern;
-		
+
 		/*setTimeout(function() {
 			self.animation.stop();
 			if (self.spritesheet._set[id]) self.spritesheet.draw(self.entity.el, id);
 		}, 200);*/
-		
+
 			self.animation.stop();
 			if (self.spritesheet._set[id]) self.spritesheet.draw(self.entity.el, id);
-		
+
 		//
 	},
 
 /**
 @doc sprite_character/
 @method startMove Starts the animation of movement
-*/	
+*/
 	startMove: function() {
 		if (!this.animation) return;
 		this.animation.play(this.getDisplayDirection(), "loop");
@@ -381,7 +401,7 @@ Class.create("Sprite_Character", {
 			}
 			this.old_direction = this.direction;
 		}
-		
+
 	},
 	getDisplayDirection: function() {
 		return this.direction_fix ? this.initial_dir : this.direction;

@@ -8,7 +8,7 @@
     },
     [
         {
-            "trigger":"contact",
+            "trigger":"on_vision",
             "type":"fixed",
             "commands":
             [

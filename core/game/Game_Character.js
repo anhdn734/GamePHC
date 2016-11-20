@@ -49,6 +49,7 @@ Class.create("Game_Character", {
 	params: {},
 	itemEquiped: {},
 	className: "",
+	character_name: "",
 	states: {},
 	skills: [],
 	defstates: {},
@@ -120,6 +121,7 @@ Class.create("Game_Character", {
 
 		// this.rect(32);
 
+		this.character_name = prop.character_name;
 		this.trigger = prop.trigger;
 		this.direction_fix = prop.direction_fix;   // Direction does not change ; no animation
 		this.no_animation = prop.no_animation; // no animation even if the direction changes
@@ -863,6 +865,7 @@ Example
 - id
 - x
 - y
+- character_name
 - nbSequenceX
 - nbSequenceY
 - speedAnimation
@@ -884,7 +887,7 @@ Example
 @return {Object}
 */
 	serialize: function() {
-		var data = ["id", "x", "y", "nbSequenceX", "nbSequenceY", "speedAnimation", "graphic_pattern", "graphic", "graphic_params", "direction", "direction_fix", "no_animation", "stop_animation", "frequence", "speed", "regX", "regY", "alwaysOnBottom", "alwaysOnTop", "exist", "is_start"];
+		var data = ["id", "x", "y", "character_name", "nbSequenceX", "nbSequenceY", "speedAnimation", "graphic_pattern", "graphic", "graphic_params", "direction", "direction_fix", "no_animation", "stop_animation", "frequence", "speed", "regX", "regY", "alwaysOnBottom", "alwaysOnTop", "exist", "is_start"];
 		var obj = {};
 		for (var i=0; i < data.length ; i++) {
 			obj[data[i]] = this[data[i]];
@@ -1761,6 +1764,5 @@ State #3 = 50%
 	"y",
 	"real_x",
 	"real_y",
-	"character_name",
 	"direction"
 ]).extend("EntityModel");

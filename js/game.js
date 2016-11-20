@@ -5,6 +5,7 @@ RPGJS.defines({
 
 	RPGJS.Player.init({
 		actor: 1,
+        character_name: "Lê Lợi",
 		start: {x: 1, y: 1, id: 1} // GAME_START
         // start: {x: 25, y: 10, id: 13}
 	});

@@ -84,6 +84,7 @@ var _class = {
 			
 			this.setProperties({
 				graphic: actor.graphic,
+				character_name: s.character_name,
 				"graphic-params": actor["graphic-params"]
 			});
 			

@@ -110,6 +110,8 @@ Class.create("Game_Event", {
 		else {
 			this.exist = true;
 			var prop = this.pages[this.currentPage];
+			prop["character_name"] = this["character_name"] || null;
+
 			this.setProperties(prop);
 			this.interpreter.assignCommands(prop.commands);
 			if (changed) {

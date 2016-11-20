@@ -541,8 +541,6 @@ var _class = {
 				actions: self.actionSerialize()
 			};
 
-
-
 			if (is_server) {
 				self.callScene("load", obj);
 			}

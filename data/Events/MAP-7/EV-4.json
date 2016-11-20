@@ -14,7 +14,7 @@
             "speed":"0.3",
             "commands":
             [
-                "SHOW_TEXT: {'text': 'Chàng hãy đến nơi có nhiều hoa nhất sa mạc này và hái 1 bông hoa đặc biệt để tặng ta, ta sẽ cho chàng qua.'}",
+                "SHOW_TEXT: {'text': 'Sa mạc này có một bông hoa rất đặc biệt, chàng hãy đi tìm nó. Nếu tìm được, ta sẽ cho chàng qua.'}",
                 "SWITCHES_ON: {'id': 'MAP_7_DAGAPCONGAIDUMUC'}"
             ],
             "conditions": {},

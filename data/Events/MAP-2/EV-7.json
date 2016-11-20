@@ -4,11 +4,11 @@
         "x":"26",
         "y":"0",
         "name": "MAP2-EV-7",
-        "desc": "Đến Kin Các Tự"
+        "desc": "Đến Kim Các Tự"
     },
     [
         {
-            "trigger":"contact",
+            "trigger":"on_vision",
             "frequence":"2",
             "type":"fixed",
             "speed":"0.3",

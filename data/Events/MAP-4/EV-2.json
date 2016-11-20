@@ -4,6 +4,7 @@
         "x":"17",
         "y":"6",
         "name": "MAP4-EV-2",
+        "character_name": "Mỏ chủ",
         "desc": "Người cai quản mỏ sắt"
     },
     [
@@ -42,7 +43,7 @@
                 "CHOICE_4",
                     "SELF_SWITCH_ON: {'id': 'QUESTION2'}",
                 "CHOICE_5",
-                    "SHOW_TEXT: {'text': 'Ngài quả thật là người có tấm lòng lo cho dân cho nước. Số lương thực này tôi xin phép tặng ngài, mong ngài có thể mau chóng hoàn thành việc lớn.'}",
+                    "SHOW_TEXT: {'text': 'Số sắt này giờ là của ngài, mong ngài có thể mau chóng hoàn thành việc lớn.'}",
                     "SWITCHES_ON: {'id': 'MAP_4_MOSAT'}",
                     "SELF_SWITCH_ON: {'id': 'TRALOIDUNG'}",
                 "ENDCHOICES"

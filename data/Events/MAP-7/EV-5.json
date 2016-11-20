@@ -19,7 +19,7 @@
             "conditions": {
                 "self_switch_off": "TAKEN"
             },
-            "graphic":"0"
+            "graphic":"201"
         },
         {
             "trigger": "auto",
@@ -44,7 +44,7 @@
             "conditions": {
                 "self_switch": "QUESTION1"
             },
-            "graphic":"0"
+            "graphic":"201"
         },
         {
             "trigger":"auto",
@@ -60,7 +60,7 @@
             {
                 "self_switch": "FAIL_NOTIFY"
             },
-            "graphic":"0"
+            "graphic":"201"
         },
         {
             "trigger":"action_button",
@@ -81,7 +81,7 @@
             {
                 "self_switch": "RETRY"
             },
-            "graphic":"0"
+            "graphic":"201"
         },
         {
             "trigger":"auto_one_time",
@@ -100,7 +100,7 @@
                 "switch_1": "MAP_7_DALAYDUOCBONGHOA",
                 "self_switch_off": "TAKEN"
             },
-            "graphic":"0"
+            "graphic":"201"
         }
     ]
 ]
