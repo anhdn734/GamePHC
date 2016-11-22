@@ -61,10 +61,14 @@ Class.create("Game_Character", {
 	removeMove: {},
 	_timeMove: "",
 	_tick: {},
+	original_position: {x: 0, y: 0},
 	initialize: function() {
 
 		this.id = 0;
 		this.position(0, 0);
+		if (arguments.length == 2 && arguments[1].length == 2){
+			this.original_position = {x: arguments[1][0].x || 0, y: arguments[1][0].y || 0}
+		}
 
 		this.rect(4, 16, 32-8, 16);
 
@@ -122,6 +126,7 @@ Class.create("Game_Character", {
 		// this.rect(32);
 
 		this.character_name = prop.character_name;
+		this.distance = prop.distance;
 		this.trigger = prop.trigger;
 		this.direction_fix = prop.direction_fix;   // Direction does not change ; no animation
 		this.no_animation = prop.no_animation; // no animation even if the direction changes
@@ -165,7 +170,7 @@ Class.create("Game_Character", {
 			params.tileToPixel = true;
 		}
 		var pos = params.tileToPixel ? global.game_map.tileToPixel(x, y) : {x: x, y: y};
-		this.position(pos.x, pos.y);
+		this.original_position = this.position(pos.x, pos.y);
 		if (params.refresh) global.game_map.callScene("setEventPosition", [this.id, pos.x, pos.y]);
 	},
 
@@ -208,6 +213,11 @@ Class.create("Game_Character", {
 				case "approach":
 					this.approachPlayer();
 				break;
+				case "around":
+					this.moveAround(this.distance);
+				break;
+				default:
+					this.movePause();
 			}
 		}
 	},
@@ -658,6 +668,59 @@ Example
 		}
 	},
 
+	/* keep near original position */
+	moveAround: function(distance) {
+		var self = this;
+
+		if (this._tick) clearTimeout(this._tick);
+
+		// this.typeMove.push("random");
+		// console.log("Ready")
+		if (!distance) distance = 64;
+		rand(this, distance);
+		function rand(self, distance) {
+			var timer;
+			if (self.removeTypeMove["move_around"]) {
+				self.removeTypeMove["move_around"]= false;
+				return;
+			}
+			if (!global.game_map.getEvent(self.id)) {
+				return;
+			}
+
+			/* check for possible dirs */
+			var dirs = [];
+			if (self.original_position.y - self.y < distance) {
+				// if (global.game_map.passable(self, self.x, self.y, self.x, -self.speed + self.y, "up").passable)
+				dirs.push("up");
+			}
+			if (self.y - self.original_position.y < distance) {
+				dirs.push("bottom");
+			}
+			if (self.x - self.original_position.x < distance) {
+				dirs.push("right");
+			}
+			if (self.original_position.x - self.x < distance) {
+				dirs.push("left");
+			}
+
+			if (dirs.length == 0) return;
+			var dir_id = CE.random(0, dirs.length);
+			var dir = dirs[dir_id];
+			// console.log(dirs)
+
+			self.moveOneTile(dir, function(kill) {
+				if (kill) {
+					return;
+				}
+				if (self.frequence != 0) {
+					global.game_map.callScene("stopEvent", [self.id]);
+				}
+				self._tick = setTimeout(rand, self.frequence * 60, self, distance);
+			});
+		}
+	},
+
 	movePause: function() {
 		if (this._tick) clearTimeout(this._tick);
 	},
@@ -670,6 +733,11 @@ Example
 			case "approach":
 				this.approachPlayer();
 			break;
+			case "around":
+				this.moveAround(this.distance);
+			break;
+			default:
+				this.movePause();
 		}
 	},
 

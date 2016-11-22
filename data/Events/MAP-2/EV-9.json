@@ -1,14 +1,13 @@
 [
     {
-        "id":"21",
-        "x":"31",
+        "x":"30",
         "y":"21",
         "name": "MAP2-EV-9",
         "desc": "Xuống núi"
     },
     [
         {
-            "trigger":"on_vision",
+            "trigger":"contact",
             "frequence":"2",
             "type":"fixed",
             "speed":"0.3",

@@ -5,9 +5,9 @@ RPGJS.defines({
 
 	RPGJS.Player.init({
 		actor: 1,
-        character_name: "Lê Lợi",
+        // character_name: "Lê Lợi",
 		start: {x: 1, y: 1, id: 1} // GAME_START
-        // start: {x: 25, y: 10, id: 13}
+        //start: {x: 10, y: 5, id: 2}
 	});
 
 	RPGJS.Scene.map(function() {
@@ -28,9 +28,11 @@ RPGJS.defines({
         RPGJS.Switches.set("STAGE_1_FINISH", true);
         RPGJS.Switches.set("MAP_13_CHUTHANH", true);
         RPGJS.Switches.set("STAGE_2_FINISH", true);
-        RPGJS.Switches.set("MAP_6_CHO_BINH_THU", true);
+        /*RPGJS.Switches.set("MAP_6_CHO_BINH_THU", true);
         RPGJS.Switches.set("STAGE_3_FINISH", true);
-        RPGJS.Switches.set("MAP_7_DALAYDUOCBONGHOA", true);*/
+        RPGJS.Switches.set("MAP_7_DALAYDUOCBONGHOA", true);
+        RPGJS.Switches.set("STAGE_2_FINISH", true);
+        RPGJS.Switches.set("MAP_8_FINISH", true);*/
 
         /* to play a sound */
         // RPGJS.System.bgmPlay(1);

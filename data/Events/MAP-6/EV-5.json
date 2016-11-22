@@ -1,0 +1,21 @@
+[
+    {
+        "x":"19",
+        "y":"10",
+        "name": "MAP6-EV-5",
+        "desc": "Binh lính"
+    },
+    [
+        {
+            "trigger":"action_button",
+            "speed": "0.3",
+            "frequence": "4",
+            "type":"fixed",
+            "direction": "right",
+            "commands":
+            [],
+            "conditions": {},
+            "graphic":"49"
+        }
+    ]
+]

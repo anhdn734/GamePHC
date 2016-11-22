@@ -406,6 +406,10 @@ var _class = {
 				RPGJS.Plugin.call("Game", "execEvent", [e, this]);
 				e.execTrigger();
 			}
+			if (e && e.trigger == "action_button_near" && e.detectionPlayer(16)) {
+				RPGJS.Plugin.call("Game", "execEvent", [e, this]);
+				e.execTrigger();
+			}
 		}
    },
 

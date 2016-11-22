@@ -1,8 +1,7 @@
 [
     {
-        "id":"49",
         "x":"21",
-        "y":"4",
+        "y":"5",
         "name": "MAP-8-EV-3",
         "desc": "Tới nơi Duy Ác"
     },
@@ -14,7 +13,7 @@
             "speed":"3",
             "commands":
             [
-                "MOVE_ROUTE: {'target': 'this','move': ['bottom', 'left', 'turn_90d_right']}",
+                "MOVE_ROUTE: {'target': 'this','move': ['left', 'turn_90d_right']}",
                 "SELF_SWITCH_ON: {'id': 'MOVE_FINISH'}"
             ],
             "conditions": {

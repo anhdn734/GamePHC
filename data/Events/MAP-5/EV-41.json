@@ -1,0 +1,24 @@
+[
+    {
+        "x":"0",
+        "y":"6",
+        "name": "MAP-5-EV-41",
+        "desc": "Quyển sách thứ 1"
+    },
+    [
+        {
+            "trigger":"action_button_near",
+            "frequence":"5",
+            "type":"fixed",
+            "speed":"0.6",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Cuốn thứ nhất: Luận đề chính nghĩa'}",
+                "SHOW_TEXT: {'text': '* Tư tưởng nhân nghĩa:\\n - Theo quan điểm của nhà Nho: nhân nghĩa là mối quan hệ tốt đẹp giữa người với người trên cơ sở tình thương và đạo lí.\\n - Với Nguyễn Trãi thì nhân nghĩa chủ yếu để yên dân, trước nhất là trừ bạo.\\nDiệt trừ tham tàn bạo ngược, bảo vệ cuộc sống yên bình của người dân.'}",
+                "SHOW_TEXT: {'text': '* Chân lí về sự tồn tại độc lập, có chủ quyền của dân tộc Đại Việt.\\n - Cương vực lãnh thổ: núi sông bờ cõi đã chia\\n - Nền văn hiến : vốn xưng nền văn hiến đã lâu\\n - Phong tục: phong tục Bắc Nam cũng khác\\n - Lịch sử riêng, chế độ riêng: từ Triệu, Đinh, Lí , Trần bao đời gây nền độc lập/ cùng Hán,Đường, Tống, Nguyên mỗi bên xưng đế một phương\\n - Hào kiệt: đời nào cũng có'}",
+                "SHOW_TEXT: {'text': 'Khẳng định nguyên lí chính nghĩa làm chỗ dựa , làm căn cứ xác đáng để triển khai toàn bộ nội dung của Đại cáo bình Ngô'}",
+                "SWITCHES_OFF: {'id': 'NOT_READY_TO_ANSWER'}"
+            ]
+        }
+    ]
+]

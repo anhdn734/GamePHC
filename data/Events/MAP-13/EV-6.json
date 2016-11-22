@@ -1,0 +1,22 @@
+[
+    {
+        "x":"10",
+        "y":"4",
+        "name": "MAP13-EV-6",
+        "desc": "Người dân"
+    },
+    [
+        {
+            "trigger":"action_button",
+            "speed": "0.3",
+            "frequence": "4",
+            "type":"around",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Sa mạc phía trước thật sự rất nguy hiểm, nhưng ở đó cũng ẩn chứa rất nhiều kho báu. Không biết đã có bao nhiêu người đã bỏ mạng. Hãy đi về phía Tây nếu ngươi muốn thử.'}"
+            ],
+            "conditions": {},
+            "graphic":"33"
+        }
+    ]
+]

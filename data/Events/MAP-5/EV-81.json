@@ -1,0 +1,21 @@
+[
+    {
+        "x":"26",
+        "y":"6",
+        "name": "EV-8",
+        "desc": "Thông tin thêm"
+    },
+    [
+        {
+            "trigger":"action_button_near",
+            "frequence":"5",
+            "type":"fixed",
+            "speed":"0.6",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Lê Lai cứu Chúa'}",
+                "SHOW_TEXT: {'text': 'Ngày 2 tháng Giêng năm Mậu Tuất, Lê Lợi chính thức phát động khởi nghĩa. Quân Minh hay tin đã điều binh đến đàn áp. Vòng vây quân thù ngày một xiết chặt. Lê Lai đã cải trang thành Lê Lợi, dẫn quân xông ra đánh địch. Tưởng rằng đã giết được Lê Lợi, tướng Minh hí hửng thu quân thoái khỏi Chí Linh.'}"
+            ]
+        }
+    ]
+]

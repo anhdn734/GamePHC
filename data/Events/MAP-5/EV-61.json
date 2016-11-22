@@ -1,0 +1,34 @@
+[
+    {
+        "x":"4",
+        "y":"6",
+        "name": "EV-6",
+        "desc": "Quyển sách thứ 3"
+    },
+    [
+        {
+            "trigger":"action_button_near",
+            "frequence":"5",
+            "type":"fixed",
+            "speed":"0.6",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Cuốn thứ ba: Quá trình chinh phạt gian khổ và tất thắng'}",
+                "CHOICES: ['Xem phần 1: Hình tượng Lê Lợi và buổi đầu kháng chiến gian khổ', 'Xem phần 2: Quá trình phản công và chiến thắng', 'Xem phần 3: Chủ trương hòa bình, nhân đạo']",
+                "CHOICE_0",
+                    "SHOW_TEXT: {'text': 'Hình tượng chủ tướng Lê Lợi được miêu tả bằng bút pháp tự sự - trữ tình\\n+ Xuất thân từ nông dân\\n+ Khiêm nhường (cách xưng \\\"ta\\\")\\n+ Nhiều suy nghĩ, trăn trở cho vận mệnh nước nhà (các từ diễn tả tâm lí ngẫm, căm, nếm mật nằm gai…)'}",
+                    "SHOW_TEXT: {'text': 'Lê Lợi là người anh hùng áo vải xuất thân từ nông dân có lòng căm thù giặc sâu sắc với ý chí hoài bão cao cả.'}",
+                    "SHOW_TEXT: {'text': 'Khó khăn của buổi đầu kháng chiến:\\n+ Quân thù : đang mạnh, xảo trá\\n+ Quân ta: lực lượng mỏng, lương thảo khan hiếm\\nTương quan không cân sức'}",
+                    "SHOW_TEXT: {'text': 'Sức mạnh giúp ta chiến thắng\\n+ Tấm lòng cứu nước\\n+ Ýchí khắc phục gian nan\\n+ Sức mạnh đoàn kết: \\\"tướng sĩ một lòng phụ tử\\\", nhân dân bốn cõi một nhà …\\n+ Sử dụng chiến thuật linh hoạt\\n+ Tư tưởng chính nghĩa'}",
+                    "SHOW_TEXT: {'text': 'Nguyễn Trãi đề cao tính chất nhân dân, tính chất toàn dân của cuộc khởi nghĩa. Đó là tư tưởng nhân văn, tiến bộ.'}",
+                "CHOICE_1",
+                    "SHOW_TEXT: {'text': '- Khí thế quân ta: hào hùng như sóng trào bão cuốn\\n- Khung cảnh chiến trường: ác liệt, dữ dội khiến trời đất đảo lộn (sắc phong vân phải đổi…)\\n- Những chiến thắng của ta: dồn dập, liên tiếp (các câu văn điệp cấu trúc, mang tính chất liệt kê..ngày…)\\n- Kẻ thù: tham sống, sợ chết, thất bại thảm hại'}",
+                    "SHOW_TEXT: {'text': '- Ngôn ngữ: sử dụng nhiều động từ mạnh liên kết với nhau tạo những chuyển rung dồn dập, các tính từ chỉ mức độ cực điểm: thây chất đầy đường, máu trôi đỏ nước…\\n- Hình ảnh phóng đại.\\n- Nhịp điệu câu văn: khi dài, khi ngắn, linh hoạt, đôi lúc lại dồn dập, sáng khoái, bay bổng, hào hung.'}",
+                "CHOICE_2",
+                    "SHOW_TEXT: {'text': '- Tha tội chết cho quân giặc đầu hàng\\n- Cấp ngựa, cấp thuyền, lương ăn cho quân bại trận\\nThể hiện đức hiếu sinh, lòng nhân đạo, tình yêu hòa bình, sách lược để tính kế lâu dài , bền vững cho non sông.\\nTính chất chính nghĩa, nhân đạo sáng ngời của cuộc khởi nghĩa Lam Sơn.'}",
+                "ENDCHOICES",
+                "SWITCHES_OFF: {'id': 'NOT_READY_TO_ANSWER'}"
+            ]
+        }
+    ]
+]

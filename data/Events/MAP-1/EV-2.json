@@ -1,6 +1,5 @@
 [
     {
-        "id":"1",
         "x":"10",
         "y":"14",
         "name":"MAP1-EV-2",
@@ -15,7 +14,7 @@
             "speed":"2",
             "commands":
             [
-                "SHOW_TEXT: {'text': 'Chúc mừng tướng quân! Tướng quân là người được lựa chọn để giải cứu đất nước khỏi lâm nguy. Để có thể thực hiện sứ mệnh của mình, dám xin tướng quân hãy nghe theo sự hướng dẫn của thần.'}",
+                "SHOW_TEXT: {'text': 'Tướng quân! Thần đã chờ Ngài ở đây từ rất lâu rồi. Thần nguyện phò tá tướng quân tới khi cuộc chiến kết thúc. Dám xin tướng quân hãy nghe theo sự hướng dẫn của thần.'}",
                 "SELF_SWITCH_ON: {'id': 'BINHNGO'}"
             ],
             "graphic":"112"
@@ -45,6 +44,7 @@
                 "CHOICES: ['Cáo', 'Hịch', 'Chiếu', 'Thể loại khác']",
                 "CHOICE_0",
                     "SHOW_TEXT: {'text': 'Chúc mừng tướng quân, Ngài đã trả lời đúng'}",
+                    "SHOW_TEXT: {'text': 'Núi Lam Sơn là vùng đất địa thế hiếm có, tướng quân hãy tìm nơi đó làm nơi xây dựng căn cứ.'}",
                     "SWITCHES_ON: {'id': 'MAP_1_NGUYENTRAI'}",
                     "SELF_SWITCH_ON: {'id': 'TRALOIDUNG'}",
                 "CHOICE_1",
@@ -80,6 +80,7 @@
                     "SELF_SWITCH_ON: {'id': 'CAU3'}",
                 "CHOICE_2",
                     "SHOW_TEXT: {'text': 'Chúc mừng tướng quân, Ngài đã trả lời đúng'}",
+                    "SHOW_TEXT: {'text': 'Núi Lam Sơn là vùng đất địa thế hiếm có, tướng quân hãy tìm nơi đó làm nơi xây dựng căn cứ.'}",
                     "SWITCHES_ON: {'id': 'MAP_1_NGUYENTRAI'}",
                     "SELF_SWITCH_ON: {'id': 'TRALOIDUNG'}",
                 "CHOICE_3",
@@ -106,6 +107,7 @@
                     "SELF_SWITCH_ON: {'id': 'FAIL_NOTIFY'}",
                 "CHOICE_1",
                     "SHOW_TEXT: {'text': 'Chúc mừng tướng quân, Ngài đã trả lời đúng'}",
+                    "SHOW_TEXT: {'text': 'Núi Lam Sơn là vùng đất địa thế hiếm có, tướng quân hãy tìm nơi đó làm nơi xây dựng căn cứ.'}",
                     "SWITCHES_ON: {'id': 'MAP_1_NGUYENTRAI'}",
                     "SELF_SWITCH_ON: {'id': 'TRALOIDUNG'}",
                 "CHOICE_2",
@@ -166,7 +168,7 @@
             "trigger":"action_button",
             "frequence":"10",
             "speed": "0.3",
-            "type":"random",
+            "type":"around",
             "commands":
             [
                 "SHOW_TEXT: {'text': 'Núi Lam Sơn là vùng đất địa thế hiếm có, tướng quân hãy tìm nơi đó làm nơi xây dựng căn cứ.'}"

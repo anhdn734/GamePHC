@@ -1,10 +1,9 @@
 [
     {
-        "id":"43",
         "x":"34",
         "y":"1",
         "name": "MAP7-EV-3",
-        "character_name": "Chiến binh",
+        "character_name": "Tráng sĩ",
         "desc": "Binh lính"
     },
     [
@@ -13,6 +12,7 @@
             "frequence":"2",
             "type":"fixed",
             "speed":"0.3",
+            "direction": "left",
             "commands":
             [
                 "SHOW_TEXT: {'text': 'Sa mạc này rất nóng, ngươi có chịu nổi không?'}",
@@ -26,6 +26,7 @@
             "frequence":"2",
             "type":"fixed",
             "speed":"0.3",
+            "direction": "left",
             "commands":
             [
                 "SHOW_TEXT: {'text': 'Cuộc chiến chống giặc Minh thật khó khăn. Ngươi đã gặp tên mục đồng rồi, để tiếp tục, ngươi cần trả lời câu hỏi của ta'}",
@@ -40,6 +41,7 @@
             "trigger": "auto",
             "frequence":"2",
             "type":"fixed",
+            "direction": "left",
             "speed":"0.3",
             "commands":
             [
@@ -61,6 +63,7 @@
             "trigger": "action_button",
             "frequence":"2",
             "type":"fixed",
+            "direction": "left",
             "speed":"0.3",
             "commands":
             [
@@ -75,10 +78,11 @@
             "trigger": "action_button",
             "frequence":"2",
             "type":"fixed",
+            "direction": "left",
             "speed":"0.3",
             "commands":
             [
-                "SHOW_TEXT: {'text' : 'Nếu ra chiến trận, ta không nghĩ ngươi sẽ sống sót. Hãy chạy đi?'}"
+                "SHOW_TEXT: {'text' : 'Nếu ra chiến trận, ta không nghĩ ngươi sẽ sống sót. Hãy chạy đi.'}"
             ],
             "conditions": {
                 "switch_off_1": "MAP_2_CONIEMTIN"
@@ -88,6 +92,7 @@
         {
             "trigger":"auto",
             "frequence":"5",
+            "direction": "left",
             "type":"fixed",
             "commands":
             [
@@ -104,6 +109,7 @@
         {
             "trigger":"action_button",
             "frequence":"5",
+            "direction": "left",
             "type":"fixed",
             "commands":
             [
@@ -126,6 +132,7 @@
             "trigger":"action_button",
             "frequence":"5",
             "speed": "0.5",
+            "direction": "left",
             "type":"fixed",
             "commands":
             [
@@ -141,6 +148,7 @@
             "trigger":"action_button",
             "frequence":"5",
             "speed": "0.5",
+            "direction": "left",
             "type":"fixed",
             "commands":
             [
@@ -156,6 +164,7 @@
             "trigger":"action_button",
             "frequence":"5",
             "speed": "0.5",
+            "direction": "left",
             "type":"fixed",
             "commands":
             [

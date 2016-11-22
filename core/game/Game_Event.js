@@ -192,14 +192,17 @@ Class.create("Game_Event", {
 	},
 
 	execTrigger: function() {
-		if (this.trigger == "action_button") {
+		if (this.trigger == "action_button" || this.trigger == "action_button_near") {
 			this.directionRelativeToPlayer();
 		}
 		else if (this.trigger == "auto") {
 			global.game_player.freeze = true;
 		}
-
-		this.execCommands();
+		var self = this;
+		self.movePause();
+		this.execCommands(function() {
+			self.moveStart();
+		});
 
 		if (this.interpreter.searchCommand("TRANSFER_PLAYER").length > 0) {
 			return false;

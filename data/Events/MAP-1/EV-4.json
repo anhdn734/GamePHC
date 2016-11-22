@@ -1,9 +1,8 @@
 [
     {
-        "id":"3",
         "x":"36",
         "y":"3",
-        "character_name": "Thổ Địa ",
+        "character_name": "Thổ Địa",
         "name":"MAP1-EV-4",
         "desc": "Gặp thổ địa"
     },
@@ -65,7 +64,6 @@
                 "CHOICE_3",
                     "SHOW_TEXT: {'text': 'Tốt quá. Đại Việt đã có người cứu nguy rồi. Ha ha ha. Từ nay, nơi này sẽ thuộc về tướng quân'}",
                     "SWITCHES_ON: {'id': 'MAP_1_THODIA'}",
-                    "SELF_SWITCH_ON: {'id': 'TRALOIDUNG'}",
                 "ENDCHOICES"
             ],
             "conditions":
@@ -122,7 +120,7 @@
             ],
             "conditions":
             {
-                "self_switch": "TRALOIDUNG"
+                "switch_1": "MAP_1_THODIA"
             },
             "graphic":"37"
         }

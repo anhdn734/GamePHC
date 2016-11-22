@@ -1,14 +1,13 @@
 [
     {
-        "id":"33",
         "x":"5",
-        "y":"7",
+        "y":"6",
         "name": "EV-6",
         "desc": "Quyển sách thứ 3"
     },
     [
         {
-            "trigger":"action_button",
+            "trigger":"action_button_near",
             "frequence":"5",
             "type":"fixed",
             "speed":"0.6",

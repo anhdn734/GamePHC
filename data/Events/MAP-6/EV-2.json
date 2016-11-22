@@ -1,7 +1,6 @@
 [
     {
-        "id":"38",
-        "x":"20",
+        "x":"19",
         "y":"12",
         "name": "MAP-8-EV-2",
         "desc": "Lính cấp báo"
@@ -9,8 +8,22 @@
     [
         {
             "trigger":"on_vision",
-            "frequence":"0.1",
+            "frequence":"0",
             "type":"approach",
+            "speed":"1.5",
+            "commands":
+            [
+                "SELF_SWITCH_ON: {'id': 'DATHONGBAO'}"
+            ],
+            "conditions": {
+                "switch_1": "MAP_6_TINTUC"
+            },
+            "graphic":"49"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"20",
+            "type":"fixed",
             "speed":"1.5",
             "commands":
             [
@@ -18,7 +31,8 @@
                 "SELF_SWITCH_ON: {'id': 'MAP_6_DATHONGBAO'}"
             ],
             "conditions": {
-                "switch_1": "MAP_6_TINTUC"
+                "switch_1": "MAP_6_TINTUC",
+                "self_switch": "DATHONGBAO"
             },
             "graphic":"49"
         },

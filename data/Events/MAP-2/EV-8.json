@@ -1,6 +1,5 @@
 [
     {
-        "id":"20",
         "x":"9",
         "y":"12",
         "name": "EV-3",
@@ -9,7 +8,7 @@
     },
     [
         {
-            "trigger":"on_vision",
+            "trigger":"action_button",
             "frequence":"2",
             "type":"fixed",
             "commands":

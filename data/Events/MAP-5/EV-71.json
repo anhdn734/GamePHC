@@ -1,0 +1,23 @@
+[
+    {
+        "x":"24",
+        "y":"6",
+        "name": "EV-7",
+        "desc": "Quyển sách thứ 4"
+    },
+    [
+        {
+            "trigger":"action_button_near",
+            "frequence":"5",
+            "type":"fixed",
+            "speed":"0.6",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Cuốn thứ 4: Tuyên bố thắng trận, bài học lịch sử'}",
+                "SHOW_TEXT: {'text': 'Giọng văn: trang nghiêm, trịnh trọng, phù hợp với việc tuyên bố, khẳng định với toàn dân về nền độc lập dân tộc, chủ quyền của đất nước.\\n- Bài học lịch sử:\\n+ Sự thay đổi thực chất là sự phục hưng dân tộc là nguyên nhân, điều kiện thiết lập sự vững bền.\\n+Sự kết hợp giữa sức mạnh truyền thống và sức mạnh thời đại làm nên chiến thắng.'}",
+                "SHOW_TEXT: {'text': 'Ý nghĩa lâu dài với công cuộc dựng nước và giữ nước của dân tộc ta.'}",
+                "SWITCHES_OFF: {'id': 'NOT_READY_TO_ANSWER'}"
+            ]
+        }
+    ]
+]

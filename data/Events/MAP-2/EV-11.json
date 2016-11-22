@@ -1,0 +1,29 @@
+[
+    {
+        "x":"21",
+        "y":"10",
+        "name": "MAP-5-EV-10",
+        "desc": "Về phòng trại binh"
+    },
+    [
+        {
+            "trigger":"action_button",
+            "frequence":"2",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text' : 'Tướng quân có muốn tới trại lính không?'}",
+                "CHOICES: ['Tới trại lính', 'Không']",
+                "CHOICE_0",
+                    "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':26,'y': 5, 'id':8}}",
+                "CHOICE_1",
+                "ENDCHOICES"
+            ],
+            "conditions": {
+                "switch_1": "STAGE_2_FINISH"
+            },
+            "graphic":"49"
+        }
+    ]
+]

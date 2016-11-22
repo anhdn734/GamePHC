@@ -1,6 +1,5 @@
 [
     {
-        "id":"10",
         "x":"0",
         "y":"19",
         "name": "MAP13-EV-1",
@@ -8,7 +7,7 @@
     },
     [
         {
-            "trigger":"on_vision",
+            "trigger":"contact",
             "frequence":"2",
             "type":"fixed",
             "speed":"0.3",

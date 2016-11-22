@@ -1,6 +1,5 @@
 [
     {
-        "id":"44",
         "x":"6",
         "y":"14",
         "name": "MAP7-EV-4",
@@ -9,8 +8,8 @@
     [
         {
             "trigger": "action_button",
-            "frequence":"2",
-            "type":"fixed",
+            "frequence":"10",
+            "type":"random",
             "speed":"0.3",
             "commands":
             [
@@ -22,8 +21,8 @@
         },
         {
             "trigger": "action_button",
-            "frequence":"2",
-            "type":"fixed",
+            "frequence":"10",
+            "type":"random",
             "speed":"0.3",
             "commands":
             [
@@ -38,8 +37,8 @@
         },
         {
             "trigger": "action_button",
-            "frequence":"2",
-            "type":"fixed",
+            "frequence":"10",
+            "type":"random",
             "speed":"0.3",
             "commands":
             [
@@ -52,8 +51,8 @@
         },
         {
             "trigger": "action_button",
-            "frequence":"2",
-            "type":"fixed",
+            "frequence":"10",
+            "type":"random",
             "speed":"0.3",
             "commands":
             [

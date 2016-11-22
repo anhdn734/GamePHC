@@ -1,6 +1,5 @@
 [
     {
-        "id":"42",
         "x":"26",
         "y":"15",
         "name": "MAP7-EV-2",
@@ -125,6 +124,21 @@
             "conditions":
             {
                 "switch_1": "MAP_7_DUMUC"
+            },
+            "graphic":"147"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"5",
+            "speed": "0.5",
+            "type":"fixed",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Ngươi hãy đưa bông hoa cho con gái ta, nó đang đi tìm bông hoa đó ở phía Tây.'}"
+            ],
+            "conditions":
+            {
+                "self_switch": "MAP_7_DALAYDUOCBONGHOA"
             },
             "graphic":"147"
         },

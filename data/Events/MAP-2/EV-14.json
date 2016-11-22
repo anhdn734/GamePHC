@@ -1,0 +1,23 @@
+[
+    {
+        "x":"21",
+        "y":"17",
+        "name": "MAP2-EV-14",
+        "desc": "Người dân"
+    },
+    [
+        {
+            "trigger":"action_button",
+            "speed": "0.3",
+            "frequence": "4",
+            "type":"fixed",
+            "direction": "left",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Chỉ có duy nhất chợ là nơi chưa bị chiến tranh tàn phá. Ta rất muốn tới đó nhưng chỉ khi nào đất nước an bình ta mới yên tâm. Khu chợ nằm ở hướng Tây Nam, người hãy tới đó mà xem'}"
+            ],
+            "conditions": {},
+            "graphic":"150"
+        }
+    ]
+]

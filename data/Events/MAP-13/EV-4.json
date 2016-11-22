@@ -1,0 +1,21 @@
+[
+    {
+        "x":"5",
+        "y":"5",
+        "name": "MAP13-EV-4",
+        "desc": "Chim trời"
+    },
+    [
+        {
+            "trigger":"contact",
+            "frequence":"0",
+            "type":"random",
+            "speed":"0.5",
+            "commands":
+            [],
+            "options": ["alwaysOnTop", "through"],
+            "conditions": {},
+            "graphic": "203"
+        }
+    ]
+]

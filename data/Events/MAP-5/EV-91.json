@@ -1,0 +1,20 @@
+[
+    {
+        "x":"28",
+        "y":"6",
+        "name": "EV-9",
+        "desc": "Thông tin thêm"
+    },
+    [
+        {
+            "trigger":"action_button_near",
+            "frequence":"5",
+            "type":"fixed",
+            "speed":"0.6",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Lê Thái Tổ, tên thật là Lê Lợi, là người khởi xướng khởi nghĩa Lam Sơn chiến thắng quân đội chiếm đóng nhà Minh, giành lại độc lập cho nước Đại Việt và trở thành vị hoàng đế sáng lập của nhà Hậu Lê'}"
+            ]
+        }
+    ]
+]

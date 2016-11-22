@@ -1,14 +1,13 @@
 [
     {
-        "id":"31",
         "x":"1",
-        "y":"7",
-        "name": "EV-2",
+        "y":"6",
+        "name": "MAP-5-EV-4",
         "desc": "Quyển sách thứ 1"
     },
     [
         {
-            "trigger":"action_button",
+            "trigger":"action_button_near",
             "frequence":"5",
             "type":"fixed",
             "speed":"0.6",

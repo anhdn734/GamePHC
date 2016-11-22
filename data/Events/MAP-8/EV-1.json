@@ -1,11 +1,9 @@
 [
     {
-        "id":"47",
         "x":"27",
         "y":"5",
         "name": "MAP-8-EV-1",
-        "character_name": "Binh lính",
-        "desc": "Đi về phòng học"
+        "desc": "Đi về căn cứ"
     },
     [
         {
@@ -15,10 +13,10 @@
             "speed":"0.3",
             "commands":
             [
-                "SHOW_TEXT: {'text' : 'Thần sẽ đưa tướng quân về phòng học. Tướng quân muốn đi chứ?'}",
-                "CHOICES: ['Vào phòng học', 'Không']",
+                "SHOW_TEXT: {'text' : 'Thần sẽ đưa tướng quân về căn cứ. Tướng quân muốn đi chứ?'}",
+                "CHOICES: ['Về căn cứ', 'Không']",
                 "CHOICE_0",
-                    "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':10,'y': 5, 'id':5}}",
+                    "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':20,'y': 10, 'id':2}}",
                 "CHOICE_1",
                 "ENDCHOICES"
             ],

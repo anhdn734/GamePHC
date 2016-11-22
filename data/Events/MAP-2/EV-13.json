@@ -1,0 +1,21 @@
+[
+    {
+        "x":"6",
+        "y":"17",
+        "name": "MAP2-EV-13",
+        "desc": "Gà"
+    },
+    [
+        {
+            "trigger":"contact",
+            "frequence":"5",
+            "type":"around",
+            "speed":"0.2",
+            "commands":
+            [],
+            "options": ["alwaysOnTop", "through"],
+            "conditions": {},
+            "graphic": "204"
+        }
+    ]
+]

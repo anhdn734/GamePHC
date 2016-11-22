@@ -188,6 +188,11 @@ RPGJS_Canvas.Scene.New({
 			global.game_map.execEvent();
 		});
 
+		//RPGJS_Canvas.Input.press([Input.Q], function() {
+		//	// reload now
+		//	document.location.reload();
+		//});
+
 		RPGJS_Canvas.Input.press([Input.Esc], function() {
 			self.pause(true);
 			RPGJS.Plugin.call("Sprite", "pressEsc", [self]);

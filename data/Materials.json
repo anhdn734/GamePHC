@@ -19,11 +19,16 @@
         "109": "109-Civilian09.png",
         "108": "108-Civilian08.png",
         "112": "112-Civilian12.png",
+        "127": "127-Noble02.png",
         "142": "142-Scholar01.png",
         "146": "146-Prisoner02.png",
         "147": "147-Storekeeper01.png",
+        "150": "150-Sailor01.png",
         "201": "201-Flower.png",
-        "202": "202-jedi.png"
+        "202": "202-jedi.png",
+        "203": "203.png",
+        "204": "204.png",
+        "205": "205.png"
     },
     "tilesets": {
         "100": "tileset.png",

@@ -1,0 +1,25 @@
+[
+    {
+        "x":"2",
+        "y":"6",
+        "name": "EV-5",
+        "desc": "Quyển sách thứ 2"
+    },
+    [
+        {
+            "trigger":"action_button_near",
+            "frequence":"5",
+            "type":"fixed",
+            "speed":"0.6",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Cuốn thứ hai: Bản cáo trạng đanh thép tội ác của giặc'}",
+                "SHOW_TEXT: {'text': '- Giọng điệu uất hận trào sôi,cảm thương tha thiết, nghẹn ngào đến tấm tức.\\n - Vạch rõ tội ác của kẻ thù\\n - Vạch trần âm mưu xâm lược của giặc Minh: nhân họ Hồ ….thừa cơ gây họa chữ \\\"cơ\\\" và \\\"nhân\\\". vạch rõ luận điệu giả dối, bịp bợp, \\\"mượn gió bẻ măng\\\" của giặc.\\nLập trường tố cáo: lập trường của dân tộc'}",
+                "SHOW_TEXT: {'text': '- Lên án những  hành động tội ác:\\n + Tàn sát người vô tội: \\\"nướng dân đen…hung tàn\\n + Bóc lột tàn ác, dã man: \\\"nặng thuế… núi\\\"\\n + Hủy diệt môi trường sống: \\\"người bị ép…cây cỏ\\\"\\nLập trường tố cáo: lập trường của nhân dân.'}",
+                "SHOW_TEXT: {'text': '- Nghệ thuật viết cáo trạng:\\n + Dùng hình tượng để diễn tả tội ác kẻ thù: nướng dân đen……hầm tai vạ\\n + Sử dụng hình ảnh đối lập: người dân vô tội bị bóc lột tàn ác dã man >< kẻ thù tàn bạo vô nhân tính \\n + Phóng đại : lấy cái vô hạn để nói cái vô hạn, lấy cái vô cùng để nói cái vô cùng'}",
+                "SHOW_TEXT: {'text': '+ Câu hỏi tu từ: \\\"lẽ nào…..chịu được?\\\"\\n + Lời văn đanh thép, thống thiết: khi uất hận trào sôi, khi cảm thương tha thiết\\n=> Đứng trên lập trường nhân bản và quyền sống của người dân, Nguyễn Trãi đã tố cáo đanh thép tội ác đồng thời lên án giặc Minh.'}",
+                "SWITCHES_OFF: {'id': 'NOT_READY_TO_ANSWER'}"
+            ]
+        }
+    ]
+]

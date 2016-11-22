@@ -1,6 +1,5 @@
 [
     {
-        "id":"48",
         "x":"20",
         "y":"6",
         "name": "MAP8-EV-2",
@@ -163,6 +162,36 @@
             "conditions":
             {
                 "self_switch": "HAY_TOI_NOI_DUY_AC"
+            },
+            "graphic":"112"
+        },
+        {
+            "trigger":"action_button",
+            "frequence":"10",
+            "speed": "0.3",
+            "type":"random",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Tướng quân hãy đi về hướng Tây, Hiền nhân đang chờ Ngài'}"
+            ],
+            "conditions":
+            {
+                "switch_1": "MAP_6_DATHONGBAO"
+            },
+            "graphic":"112"
+        },
+        {
+            "trigger":"auto",
+            "frequence":"10",
+            "speed": "0.3",
+            "type":"random",
+            "commands":
+            [
+                "ERASE_EVENT: true"
+            ],
+            "conditions":
+            {
+                "switch_1": "STAGE_3_FINISH"
             },
             "graphic":"112"
         }

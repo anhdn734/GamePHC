@@ -1,6 +1,5 @@
 [
     {
-        "id":"45",
         "x":"3",
         "y":"1",
         "name": "MAP7-EV-2",
@@ -8,7 +7,7 @@
     },
     [
         {
-            "trigger": "on_vision",
+            "trigger": "contact",
             "frequence":"2",
             "type":"fixed",
             "commands":

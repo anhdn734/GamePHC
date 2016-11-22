@@ -1,8 +1,7 @@
 [
     {
-        "id":"25",
-        "x":"16",
-        "y":"14",
+        "x":"19",
+        "y":"16",
         "name": "MAP4-EV-1",
         "desc": "Trở về căn cứ"
     },
@@ -14,7 +13,7 @@
             "speed":"0.3",
             "commands":
             [
-                "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':1,'y': 3, 'id':2}}"
+                "TRANSFER_PLAYER: {'position-type': 'constant', 'appointement': {'x':1,'y': 2, 'id':2}}"
             ],
             "conditions": {}
         }

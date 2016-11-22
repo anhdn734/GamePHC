@@ -1,6 +1,5 @@
 [
     {
-        "id":"40",
         "x":"2",
         "y":"14",
         "name": "MAP-8-EV-4",
@@ -10,9 +9,9 @@
     [
         {
             "trigger":"action_button",
-            "frequence":"1",
-            "type":"fixed",
-            "speed":"1.5",
+            "frequence":"20",
+            "type":"around",
+            "speed":"0.3",
             "commands":
             [
                 "SHOW_TEXT: {'text' : 'Cuộc chiến này chưa thấy dấu hiệu kết thúc'}"
@@ -24,11 +23,10 @@
             "trigger":"on_vision",
             "frequence":"0",
             "type":"approach",
-            "speed":"1.5",
+            "speed":"1",
             "commands":
             [
-                "SHOW_TEXT: {'text' : 'Tình hình đang nguy cấp, để giải vây thế trận này, chúng ta cần phải tìm được binh thư, tương truyền đó là cuốn binh pháp truyền từ 18 đời, lưu giữ những bí kíp võ công tuyệt đỉnh. Theo tiếng đồn xa, hiện nay binh pháp ấy đang được cất giữ ở quả núi cao nhất phía Bắc, cách đây hơn 200 dặm. Muốn đến được nơi ấy phải băng qua một con sông lớn, hai cánh rừng hiểm trở với rất nhiều thú dữ.'}",
-                "SWITCHES_ON: {'id': 'MAP_6_CHO_BINH_THU'}"
+                "SELF_SWITCH_ON: {'id': 'DATHONGBAO'}"
             ],
             "conditions": {
                 "switch_1": "MAP_6_DATHONGBAO"
@@ -36,8 +34,23 @@
             "graphic":"50"
         },
         {
+            "trigger":"auto",
+            "frequence":"10",
+            "type":"fixed",
+            "speed":"0.3",
+            "commands":
+            [
+                "SHOW_TEXT: {'text' : 'Tình hình đang nguy cấp, để giải vây thế trận này, chúng ta cần phải tìm được binh thư, tương truyền đó là cuốn binh pháp truyền từ 18 đời, lưu giữ những bí kíp võ công tuyệt đỉnh. Theo tiếng đồn xa, hiện nay binh pháp ấy đang được cất giữ ở quả núi cao nhất phía Bắc, cách đây hơn 200 dặm. Muốn đến được nơi ấy phải băng qua một con sông lớn, hai cánh rừng hiểm trở với rất nhiều thú dữ.'}",
+                "SWITCHES_ON: {'id': 'MAP_6_CHO_BINH_THU'}"
+            ],
+            "conditions": {
+                "self_switch": "DATHONGBAO"
+            },
+            "graphic":"50"
+        },
+        {
             "trigger":"action_button",
-            "type":"random",
+            "type":"around",
             "frequence":"5",
             "speed": "0.3",
             "commands":

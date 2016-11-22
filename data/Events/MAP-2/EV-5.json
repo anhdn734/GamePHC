@@ -1,6 +1,5 @@
 [
     {
-        "id":"17",
         "x":"24",
         "y":"12",
         "name": "MAP2-EV-5",
@@ -10,7 +9,9 @@
     [
         {
             "trigger":"action_button",
-            "type":"fixed",
+            "speed": "0.3",
+            "frequence": "4",
+            "type":"around",
             "commands":
             [
                 "SHOW_TEXT: {'text': 'Tôi là thợ rèn nơi đây. Tôi có thể giúp ngài rèn vũ khí nhưng cần phải có nguồn sắt tốt nhất. Ngài hãy đi vào mỏ sắt để tìm.'}",
@@ -25,6 +26,7 @@
         {
             "trigger":"action_button",
             "type":"fixed",
+            "direction": "left",
             "commands":
             [
                 "SHOW_TEXT: {'text': 'Mỏ sắt nằm ở phía Tấy Bắc'}"

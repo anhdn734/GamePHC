@@ -1,0 +1,22 @@
+[
+    {
+        "x":"7",
+        "y":"4",
+        "name": "MAP2-EV-10",
+        "desc": "Người dân"
+    },
+    [
+        {
+            "trigger":"action_button",
+            "speed": "0.3",
+            "frequence": "4",
+            "type":"around",
+            "commands":
+            [
+                "SHOW_TEXT: {'text': 'Nghe nói, ở phía xa, nơi khu chợ sầm uất ấy, có một chàng trai trẻ đang tìm người để phò tá.'}"
+            ],
+            "conditions": {},
+            "graphic":"127"
+        }
+    ]
+]

@@ -1,14 +1,13 @@
 [
     {
-        "id":"12",
         "x":"0",
-        "y":"3",
+        "y":"4",
         "name": "MAP13-EV-3",
         "desc": "Qua sa mạc"
     },
     [
         {
-            "trigger":"on_vision",
+            "trigger":"contact",
             "frequence":"2",
             "type":"fixed",
             "speed":"0.3",
